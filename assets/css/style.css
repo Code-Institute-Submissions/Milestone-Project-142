@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 /*------------------------------------------------------------------------------
 General*/
 
@@ -72,3 +72,17 @@ a { text-decoration: none; }
 	animation-fill-mode: forwards;
 }
 
+#cover {
+    font-family: "Permanent Marker", sans-serif;
+    color:white;
+	position: absolute;
+	text-align: left;
+	top: 20%;
+	width: 100%;
+    transform: rotate(-10deg);
+    margin-left:20%;
+}
+
+#cover h1{
+    font-size: 6rem;
+}
