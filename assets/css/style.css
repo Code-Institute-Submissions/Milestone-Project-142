@@ -24,10 +24,15 @@ body {
 	overflow-x: hidden;
 }
 
+p{
+    font-family: "Merienda One", sans-serif;
+    font-size:1.5rem;
+}
 
 a { text-decoration: none; }
 
 /*--------------------------------------------------Nav*/
+
 #madrid-logo{
     padding-left:20px;
     font-size:2rem;
@@ -62,14 +67,15 @@ a { text-decoration: none; }
 }
 
 /*--------------------------------------------------Hero Image*/
+#hero-section {
+	overflow: hidden;
+}
+
 
 #hero {
 	width: 100%;
 	height: 800px;
 	background: linear-gradient(180deg, rgba(37, 21, 20, 0.3) 99.99%, rgba(255, 255, 255, 0) 100%), url(../images/madridhero.png)no-repeat center center;
-	animation-name: hero-zoom;
-	animation-duration: 5s;
-	animation-fill-mode: forwards;
 }
 
 #cover {
@@ -85,4 +91,15 @@ a { text-decoration: none; }
 
 #cover h1{
     font-size: 6rem;
+}
+
+/*--------------------------------------------------About Section*/
+
+.about-section{
+    text-align:center;
+}
+
+.about-section h1{
+    font-size:4rem;
+    padding:20px;
 }
