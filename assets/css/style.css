@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+/*------------------------------------------------------------------------------
+General*/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	color: black;
+	font-family: "Righteous", sans-serif;
+	background-color: #fafafa;
+	letter-spacing: 0px;
+}
+
+
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+
+a { text-decoration: none; }
+
+/*--------------------------------------------------Nav*/
+#madrid-logo{
+    padding-left:20px;
+    font-size:2rem;
+}
+
+#madrid-logo img{
+    padding-right:10px;
+}
+
+#nav-title {
+    font-size:2rem;
+}
+
+
+.nav-items{
+    text-decoration:none;
+    color:black;
+}
+
+.nav-items:hover{
+    text-decoration:none;
+    color:green;
+}
+
+
+.menu-items li{
+    text-decoration: none;
+    padding:40px;
+    list-style: none;
+    float:right;
+    font-size: 1.3rem;
+}
+
+
+
