@@ -13,7 +13,7 @@ General*/
 body {
 	color: black;
 	font-family: "Righteous", sans-serif;
-	background-color: #fafafa;
+	background-color: white;
 	letter-spacing: 0px;
 }
 
@@ -26,13 +26,15 @@ body {
 
 p{
     font-family: "Merienda One", sans-serif;
-    font-size:1.5rem;
+    font-size:1.2rem;
 }
 
 a { text-decoration: none; }
 
 /*--------------------------------------------------Nav*/
-
+#nav-section{
+    background-color:#fafafa;
+}
 #madrid-logo{
     padding-left:20px;
     font-size:2rem;
@@ -94,12 +96,44 @@ a { text-decoration: none; }
 }
 
 /*--------------------------------------------------About Section*/
+#about{
+    background-color:#fafafa;
+}
+
 
 .about-section{
     text-align:center;
 }
 
 .about-section h1{
-    font-size:4rem;
-    padding:20px;
+    font-size:3rem;
+    padding:40px;
+}
+
+
+
+/*--------------------------------------------------Map Section*/
+
+.map-section{
+    text-align:center;
+    padding:50px;
+}
+
+.map-section h1{
+    font-size:3rem
+}
+
+#map {
+  height: 50%;
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  float:center;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
