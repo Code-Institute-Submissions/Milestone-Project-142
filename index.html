@@ -9,6 +9,8 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl_2yZV7SOaNuQLQcxgZSew9-jX6hpkA&callback=initMap&libraries=&v=weekly"
       defer
@@ -22,7 +24,8 @@
      
     <link rel="icon" href="#">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
     <script src="assets/js/javascript.js"></script>
 
 </head>
@@ -66,7 +69,7 @@
     <div class="container">
     <div class="row">
         <div class="about-section col-md-12">
-            <h1>About Madrid</h1>
+            <h1>What Madrid has to offer</h1>
             <p>Madrid is the capital of Spain and one of the largest cities in Europe. Home to 3 million madrilenos and over 6 million tourists each year you’ll regret not coming to see what all the fuss is about! You wont be dissapointed!</p>
         </div> 
     </div>
@@ -83,10 +86,45 @@
         
         <div id="map"></div>
 
-    <section>Eat</section>
+    <section class="our-team">
+         <div class="container">
+            <div class="team-cards mt-0">
+               <div class="row ">
+                  <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                     <div class="team-card card">
+                        <img src="assets/images/montaditos.png" alt="Mark" class="">
+                        <h1>100 Montaditos</h1>
+                        <p class="title">Calle de Fuencarral, 145</p>
+                        <p>100 Montaditos offers a range of mini sandwiches filled with a variety of spanish tapas!</p>
+                        <p><button onclick="window.location.href='sign-up.html';">See Where</button></p>
+                     </div>
+                  </div>
+                  <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                     <div class="team-card card">
+                        <img class="" src="assets/images/mallorquina.png" alt="Emily">
+                        <h1>La Mallorquina</h1>
+                        <p class="title">Puerta del Sol, 8</p>
+                        <p>Mallorquina offer the best pastries you can get in Madrid!</p>
+                        <p><button onclick="window.location.href='sign-up.html';">See Where</button></p>
+                     </div>
+                  </div>
+                  <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                     <div class="team-card card">
+                        <img src="assets/images/astor.png" alt="Juan" class="widths">
+                        <h1>Astor</h1>
+                        <p class="title">Calle del Almendro, 9, 28005</p>
+                        <p>If youre looking for more of a classy dining experience Astor is one of the best to go!</p>
+                        <p><button onclick="window.location.href='sign-up.html';">See Where</button></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
     <section>Visit</section>
     <section>Quiz</section>
     <section>Contact</section>
     <section>Footer</section>
+     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 </body>
 </html>

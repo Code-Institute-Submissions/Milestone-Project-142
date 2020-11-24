@@ -3,11 +3,12 @@ let map;
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 40.426775, lng: -3.703790 },
-    zoom: 12,
+    zoom: 13,
   });
 
  var locations = [
-      ['<b>Santiago Bernabeu</b>' + "<br>Real Madrid's Stadium <br><img src='assets/images/bernabeu.png' alt='' width='250px' height='150px'>", 40.4530, -3.6883, 4],
+      ['<b>Santiago Bernabeu</b>' + "<br>Real Madrid's Stadium <br><img src='assets/images/bernabeu.png' alt='' width='250px' height='150px'><br><a class='nav-items' href='https://www.realmadrid.com/en'><b>VISIT REAL MADRID WEBSITE</b></a>", 40.4530, -3.6883, 4],
+      ['<b>Retiro Park</b>' + "<br>One of the largest and prettiest parks in all of Madrid <br><img src='assets/images/retiro.png' alt='' width='300px' height='150px'>", 40.4153, -3.6845, 6],
       ['<b>Vicente Calderon</b>' + "<br>Atletico Madrid's Stadium"+ "<br><img src='assets/images/calderon.png' alt='' width='300px' height='150px'>", 40.4017, -3.7206, 5],
       ['<b>Royal Palace</b>' + '<br>Home to the Spanish Royal Family'+ "<br><img src='assets/images/madridmain.png' alt='' width='300px' height='150px'>", 40.4180, -3.7143, 3],
       ['<b>Gran Via</b>' + '<br>Main Shoping high street in Madrid'+ "<br><img src='assets/images/granvia.png' alt='' width='300px' height='200px'>", 40.4200, -3.7021, 2],
@@ -34,3 +35,4 @@ function initMap() {
     }
 
 }
+
