@@ -7,10 +7,6 @@
 
    <title>Madrid</title>
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl_2yZV7SOaNuQLQcxgZSew9-jX6hpkA&callback=initMap&libraries=&v=weekly"
       defer
@@ -25,6 +21,7 @@
     <link rel="icon" href="#">
 
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="assets/js/javascript.js"></script>
 
@@ -86,45 +83,109 @@
         
         <div id="map"></div>
 
-    <section class="our-team">
-         <div class="container">
-            <div class="team-cards mt-0">
-               <div class="row ">
-                  <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                     <div class="team-card card">
-                        <img src="assets/images/montaditos.png" alt="Mark" class="">
-                        <h1>100 Montaditos</h1>
-                        <p class="title">Calle de Fuencarral, 145</p>
-                        <p>100 Montaditos offers a range of mini sandwiches filled with a variety of spanish tapas!</p>
-                        <p><button onclick="window.location.href='sign-up.html';">See Where</button></p>
-                     </div>
-                  </div>
-                  <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                     <div class="team-card card">
-                        <img class="" src="assets/images/mallorquina.png" alt="Emily">
-                        <h1>La Mallorquina</h1>
-                        <p class="title">Puerta del Sol, 8</p>
-                        <p>Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!</p>
-                        <p><button onclick="window.location.href='sign-up.html';">See Where</button></p>
-                     </div>
-                  </div>
-                  <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                     <div class="team-card card">
-                        <img src="assets/images/astor.png" alt="Juan">
-                        <h1>Astor Restaurant</h1>
-                        <p class="title">Calle del Almendro, 9</p>
-                        <p>If you're looking for more of a classy dining experience Astor is one of the best to go!</p>
-                        <p><button onclick="window.location.href='sign-up.html';">See Where</button></p>
-                     </div>
-                  </div>
-               </div>
+    <section class="locations-section">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Places to Eat</h1>
+                    </div>
+                </div>
             </div>
-         </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                    <div class="locations-card card">
+                    <img src="assets/images/montaditos.png" alt="Mark" class="">
+                    <h1>100 Montaditos</h1>
+                    <p class="title">Calle de Fuencarral, 145</p>
+                    <a class="btn btn-primary btn-block show-more-btn">More Info</a>
+                    <p class="paragraph-hide">100 Montaditos offers a range of mini sandwiches filled with a variety of spanish tapas!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                    <div class="locations-card card">
+                    <img class="" src="assets/images/mallorquina.png" alt="Emily">
+                    <h1>La Mallorquina</h1>
+                    <p class="title">Puerta del Sol, 8</p>
+                    <a class="btn btn-primary btn-block show-more-btn">More Info</a>
+                    <p class="paragraph-hide">Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                    <div class="locations-card card">
+                    <img src="assets/images/astor.png" alt="Juan">
+                    <h1>Astor Restaurant</h1>
+                    <p class="title">Calle del Almendro, 9</p>
+                    <a class="btn btn-primary btn-block show-more-btn">More Info</a>
+                    <p class="paragraph-hide">If you're looking for more of a classy dining experience Astor is one of the best to go!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
       </section>
-    <section>Visit</section>
+      <section class="locations-section">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Places to Visit</h1>
+                    </div>
+                </div>
+            </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                    <div class="locations-card card">
+                    <img src="assets/images/sol.png" alt="Mark" class="">
+                    <h1>Puerta <br>del sol</h1>
+                    <p class="title">Sol</p>
+                    <a class="btn btn-primary btn-block show-more-btn">More Info</a>
+                    <p class="paragraph-hide">This plaza is located in the center of Madrid next to shops and restaurants.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                    <div class="locations-card card">
+                    <img class="" src="assets/images/cava.png" alt="Emily">
+                    <h1>Calle de Cava Baja</h1>
+                    <p class="title">Calle de Cava Baja</p>
+                    <a class="btn btn-primary btn-block show-more-btn">More Info</a>
+                    <p class="paragraph-hide">All along this road you will find many trdtional Spanish tapas bars to enjoy!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                    <div class="locations-card card">
+                    <img src="assets/images/mercado.png" alt="Juan">
+                    <h1>Mercado San Miguel</h1>
+                    <p class="title">Plaza San Miguel</p>
+                    <a class="btn btn-primary btn-block show-more-btn">More Info</a>
+                    <p class="paragraph-hide">One of the best European markets, you can buy wholefoods, tapas and even wine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+
     <section>Quiz</section>
     <section>Contact</section>
     <section>Footer</section>
      <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/04777e1f35.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/scriptmadrid.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </body>
 </html>

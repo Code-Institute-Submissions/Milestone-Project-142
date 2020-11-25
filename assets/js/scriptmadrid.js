@@ -36,3 +36,24 @@ function initMap() {
 
 }
 
+
+
+
+$(document).ready(function () {
+  $(".paragraph-hide").hide();
+});
+$(".show-more-btn").click(function () {
+  $(this).siblings("p").removeClass('paragraph-hide').toggle("fast");
+});
+
+$(function(){
+   $(".show-more-btn").click(function () {
+
+        if ($(this).text() === 'More Info') {
+            $(this).text('Less Info');
+    
+        } else {
+            $(this).text('More Info');
+        }
+    });
+});
