@@ -122,6 +122,7 @@ a { text-decoration: none; }
 .map-section{
     text-align:center;
     padding:50px;
+    padding-bottom:30px;
 }
 
 .map-section h1{
@@ -134,6 +135,7 @@ a { text-decoration: none; }
   margin-left:auto;
   margin-right:auto;
   float:center;
+  margin-bottom:30px;
 }
 
 html,
@@ -172,29 +174,29 @@ body {
 	font-size: 1rem;
 }
 
-.locations-card button {
+.locations-card a {
 	border: none;
 	outline: 0;
 	display: inline-block;
 	padding: 8px;
 	color: white;
-	background-color: green;
+	background-color: green !important;
 	text-align: center;
 	cursor: pointer;
 	width: 100%;
 	font-size: 1rem;
 }
 
-.locations-card button:hover,
+.locations-card
 a:hover {
 	opacity: 0.7;
-	color: orange;
+	color: orange !important;
 }
 
 .locations-card a {
 	float: left;
 	font-size: 1rem;
-	color: green;
+	color: black !important;
 }
 
 .padding-0 {
