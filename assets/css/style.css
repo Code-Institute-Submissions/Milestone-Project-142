@@ -15,6 +15,7 @@ body {
 	font-family: "Righteous", sans-serif;
 	background-color: white;
 	letter-spacing: 0px;
+    overflow-x: hidden;
 }
 
 
@@ -211,4 +212,29 @@ a:hover {
 }
 
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
 
+.fade-in.appear{
+    opacity: 1;
+}
+
+.from-left {
+    grid-column: 2/3;
+    transform: translateX(-50%)
+}
+
+.from-right {
+    grid-column: 3/4;
+    transform: translateX(50%)
+}
+
+.from-left,.from-right{
+    transition: transform 400ms ease-in;
+}
+
+.from-left,.from-right{
+    transition: translateX(0);
+}
