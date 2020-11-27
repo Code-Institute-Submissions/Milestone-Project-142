@@ -43,7 +43,7 @@ $(document).ready(function () {
   $(".paragraph-hide").hide();
 });
 $(".show-more-btn").click(function () {
-  $(this).siblings("p").removeClass('paragraph-hide').toggle("fast");
+  $(this).siblings().removeClass('paragraph-hide').toggle("fast");
 });
 
 $(function(){
@@ -102,3 +102,25 @@ function backToTop(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+  
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+
