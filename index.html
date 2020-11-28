@@ -96,23 +96,26 @@
         <div class="container">
             <div class="row fade-in">
                 <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                    <div class="locations-card card ">
+                    <div class="locations-card card" card-num="one">
                     <img src="assets/images/montaditos.png" alt="Montaditos" class="">
-                    <span id="more">
+                    <span class="dots"></span>
+                    <span class="more" style="display: none;">
                     <h1>100 Montaditos</h1>
                     <p class="title">Calle de Fuencarral, 145</p>
                     <p>
                     100 Montaditos offers a range of mini sandwiches filled with a variety of spanish tapas!</p></span>
-                    <button class="btn btn-primary btn-block" onclick="myFunction()" id="myBtn">Read more</button>
+                    <button onclick="readMore('one')" class="myBtn">Read more</button>
                     </div>
                 </div>
                 <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                    <div class="locations-card card">
+                    <div class="locations-card card" card-num="two">
                     <img class="" src="assets/images/mallorquina.png" alt="Emily">
+                    <span class="dots"></span>
+                    <span class="more" style="display: none;">
                     <h1>La Mallorquina</h1>
                     <p class="title">Puerta del Sol, 8</p>
-                    <a class="btn btn-primary btn-block show-more-btn">More Info</a>
-                    <p class="paragraph-hide">Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!</p>
+                    <p>Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!</p></span>
+                    <button onclick="readMore('two')" class="myBtn">Read more</button>
                     </div>
                 </div>
                 <div class="col-md-4 padding-0 d-flex align-items-stretch">
@@ -168,9 +171,7 @@
         </div>
       </section>
       <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-
-<button onclick="myFunction()" id="myBtn">Read more</button>
+        
       </section>
     <section>Quiz</section>
     <section>Contact</section>
