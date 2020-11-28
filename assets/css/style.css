@@ -175,7 +175,7 @@ body {
 	font-size: 1rem;
 }
 
-.locations-card a {
+.locations-card button {
 	border: none;
 	outline: 0;
 	display: inline-block;
@@ -189,7 +189,7 @@ body {
 }
 
 .locations-card
-a:hover {
+button:hover {
 	opacity: 0.7;
 	color: orange !important;
 }
