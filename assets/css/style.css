@@ -33,41 +33,28 @@ p{
 a { text-decoration: none; }
 
 /*--------------------------------------------------Nav*/
-#nav-section{
-    background-color:#fafafa;
-}
-#madrid-logo{
-    padding-left:20px;
-    font-size:2rem;
-}
-
-#madrid-logo img{
-    padding-right:10px;
-}
-
-#nav-title {
-    font-size:2rem;
+.navbar{
+    background:#fafafa;
 }
 
 
-.nav-items{
-    text-decoration:none;
+.nav-item{
+    float:right;
+}
+
+
+.nav-link{
+    color: black;
+}
+
+.navbar-brand{
     color:black;
 }
 
-.nav-items:hover{
-    text-decoration:none;
-    color:green;
+.navbar a:hover {
+color: green;
 }
 
-
-.menu-items li{
-    text-decoration: none;
-    padding:40px;
-    list-style: none;
-    float:right;
-    font-size: 1.3rem;
-}
 
 /*--------------------------------------------------Hero Image*/
 #hero-section {
