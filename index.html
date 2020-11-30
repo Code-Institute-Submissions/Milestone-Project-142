@@ -1,187 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Madrid</title>
+      <script
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl_2yZV7SOaNuQLQcxgZSew9-jX6hpkA&callback=initMap&libraries=&v=weekly"
+         defer
+         ></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <link rel="icon" href="#">
+      <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="assets/js/javascript.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Madrid</title>
-
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl_2yZV7SOaNuQLQcxgZSew9-jX6hpkA&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-      
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-      
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-     
-    <link rel="icon" href="#">
-
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script src="assets/js/javascript.js"></script>
-
-</head>
-<body>
-<button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
-
-<nav class="navbar navbar-expand-md sticky-top">
-<a class="navbar-brand" href="#"><img src="assets/images/madridicon.png" alt="" height="100px"></a>
-<a class="navbar-brand" href="#">Madrid</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item">
-<a class="nav-link" href="#">Home</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">Map</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">Locations</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">Contact</a>
-</li>
-</ul>
-</div>
-</nav>
-    <section id="hero-section">
-        <div class="row">
-        <div class="col-md-12">
-            <div id="hero"></div>
-            <div id="cover">
-                <h1>Madrid</h1>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_dgvKRCTSsUV8gAd5MyAFt");
+   })();
+</script>
+   </head>
+   <body>
+      <!--Back to top button-->
+      <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-md sticky-top">
+         <a class="navbar-brand" href="#"><img src="assets/images/madridicon.png" alt=""></a>
+         <a class="navbar-brand" href="#">Madrid</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Map</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Locations</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <!--Hero Image Section-->
+      <section id="hero-section">
+         <div class="row">
+            <div class="col-md-12">
+               <div id="hero"></div>
+               <div id="cover">
+                  <h1>Madrid</h1>
+               </div>
             </div>
-        </div>
-        </div>
-    </section>
-    <section id="about">
-    <div class="container">
-    <div class="row">
-        <div class="about-section col-md-12 fade-in">
-            <h1>What Madrid has to offer</h1>
-            <p>Madrid is the capital of Spain and one of the largest cities in Europe. Home to 3 million madrilenos and over 6 million tourists each year you’ll regret not coming to see what all the fuss is about! You wont be dissapointed!</p>
-        </div> 
-    </div>
-    </div>
-    </section>
- 
-            <div class="container">
-                <div class="row">
-                    <div class="map-section col-md-12 fade-in">
-                        <h1>Explore Madrid</h1>
-                    </div>
-                </div>
-            </div>
-        
-        <div class="fade-in" id="map"></div>
-
-    <section class="locations-section">
-        <div class="container">
-                <div class="row">
-                    <div class="col-md-12 fade-in">
-                        <h1>Places to Eat</h1>
-                    </div>
-                </div>
-            </div>
-        <div class="container">
-            <div class="row fade-in">
-                <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                    <div class="locations-card card" card-num="one">
-                    <img src="assets/images/montaditos.png" alt="Montaditos" class="">
-                    <span class="dots"></span>
-                    <span class="more" style="display: none;">
-                    <h1>100 Montaditos</h1>
-                    <p class="title">Calle de Fuencarral, 145</p>
-                    <p>
-                    100 Montaditos offers a range of mini sandwiches filled with a variety of spanish tapas!</p></span>
-                    <button onclick="readMore('one')" class="myBtn">Read more</button>
-                    </div>
-                </div>
-                <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                    <div class="locations-card card" card-num="two">
-                    <img class="" src="assets/images/mallorquina.png" alt="Emily">
-                    <span class="dots"></span>
-                    <span class="more" style="display: none;">
-                    <h1>La Mallorquina</h1>
-                    <p class="title">Puerta del Sol, 8</p>
-                    <p>Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!</p></span>
-                    <button onclick="readMore('two')" class="myBtn">Read more</button>
-                    </div>
-                </div>
-                <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                    <div class="locations-card card" card-num="three">
-                    <img src="assets/images/astor.png" alt="Juan">
-                    <span class="dots"></span>
-                    <span class="more" style="display: none;">
-                    <h1>Astor Restaurant</h1>
-                    <p class="title">Calle del Almendro, 9</p>
-                    <p>If you're looking for more of a classy dining experience Astor is one of the best to go!</p></span>
-                    <button onclick="readMore('three')" class="myBtn">Read more</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+         </div>
       </section>
+      <!--About Section-->
+      <section id="about">
+         <div class="container">
+            <div class="row">
+               <div class="about-section col-md-12 fade-in">
+                  <h1>What Madrid has to offer</h1>
+                  <p>Madrid is the capital of Spain and one of the largest cities in Europe. Home to 3 million madrilenos and over 6 million tourists each year you’ll regret not coming to see what all the fuss is about! You wont be dissapointed!</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--Map Section-->
+      <div class="container">
+         <div class="row">
+            <div class="map-section col-md-12 fade-in">
+               <h1>Explore Madrid</h1>
+            </div>
+         </div>
+      </div>
+      <!--Google Maps-->
+      <div class="fade-in" id="map"></div>
+      <!--Cards with places to Eat Section-->
       <section class="locations-section">
-        <div class="container">
-                <div class="row fade-in">
-                    <div class="col-md-12">
-                        <h1>Places to Visit</h1>
-                    </div>
-                </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 fade-in">
+                  <h1>Places to Eat</h1>
+               </div>
             </div>
-        <div class="container">
+         </div>
+         <div class="container">
             <div class="row fade-in">
-                <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                    <div class="locations-card card" card-num="four">
-                    <img src="assets/images/sol.png" alt="Mark" class="">
-                    <span class="dots"></span>
-                    <span class="more" style="display: none;">
-                    <h1>Puerta del sol</h1>
-                    <p class="title">Sol</p>
-                    <p>This plaza is located in the center of Madrid next to shops and restaurants.</p></span>
-                    <button onclick="readMore('four')" class="myBtn">Read more</button>
-                    </div>
-                </div>
-                <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                    <div class="locations-card card" card-num="five">
-                    <img class="" src="assets/images/cava.png" alt="Emily">
-                    <span class="dots"></span>
-                    <span class="more" style="display: none;">
-                    <h1>Calle de Cava Baja</h1>
-                    <p class="title">Calle de Cava Baja</p>
-                    <p>All along this road you will find many trdtional Spanish tapas bars to enjoy!</p></span>
-                    <button onclick="readMore('five')" class="myBtn">Read more</button>
-                    </div>
-                </div>
-                <div class="col-md-4 padding-0 d-flex align-items-stretch">
-                    <div class="locations-card card" card-num="six">
-                    <img src="assets/images/mercado.png" alt="Juan">
-                    <span class="dots"></span>
-                    <span class="more" style="display: none;">
-                    <h1>Mercado San Miguel</h1>
-                    <p class="title">Plaza San Miguel</p>
-                    <p>One of the best European markets, you can buy wholefoods, tapas and even wine.</p></span>
-                    <button onclick="readMore('six')" class="myBtn">Read more</button>
-                    </div>
-                </div>
+               <div class=" col-md-4 padding-0 d-flex align-items-stretch" >
+                  <div class="locations-card card" card-num = "one">
+                     <img src="assets/images/montaditos.png" alt="Montaditos" class="">
+                     <span class="dots"></span>
+                     <div class="more" style="display: none;">
+                        <h1>100 Montaditos</h1>
+                        <p class="title">Calle de Fuencarral, 145</p>
+                        <p>
+                           100 Montaditos offers a range of mini sandwiches filled with a variety of spanish tapas!
+                        </p>
+                     </div>
+                     <button onclick="readMore('one')" class="myBtn">Read more</button>
+                  </div>
+               </div>
+               <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                  <div class="locations-card card" card-num="two">
+                     <img class="" src="assets/images/mallorquina.png" alt="Emily">
+                     <span class="dots"></span>
+                     <div class="more" style="display: none;">
+                        <h1>La Mallorquina</h1>
+                        <p class="title">Puerta del Sol, 8</p>
+                        <p>Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!</p>
+                     </div>
+                     <button onclick="readMore('two')" class="myBtn">Read more</button>
+                  </div>
+               </div>
+               <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                  <div class="locations-card card" card-num="three">
+                     <img src="assets/images/astor.png" alt="Juan">
+                     <span class="dots"></span>
+                     <div class="more" style="display: none;">
+                        <h1>Astor Restaurant</h1>
+                        <p class="title">Calle del Almendro, 9</p>
+                        <p>If you're looking for more of a classy dining experience Astor is one of the best to go!</p>
+                     </div>
+                     <button onclick="readMore('three')" class="myBtn">Read more</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--Card with places to visit section-->
+      <section class="locations-section">
+         <div class="container">
+            <div class="row fade-in">
+               <div class="col-md-12">
+                  <h1>Places to Visit</h1>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row fade-in">
+               <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                  <div class="locations-card card" card-num="four">
+                     <img src="assets/images/sol.png" alt="Mark" class="">
+                     <span class="dots"></span>
+                     <div class="more" style="display: none;">
+                        <h1>Puerta del sol</h1>
+                        <p class="title">Sol</p>
+                        <p>This plaza is located in the center of Madrid next to shops and restaurants.</p>
+                     </div>
+                     <button onclick="readMore('four')" class="myBtn">Read more</button>
+                  </div>
+               </div>
+               <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                  <div class="locations-card card" card-num="five">
+                     <img class="" src="assets/images/cava.png" alt="Emily">
+                     <span class="dots"></span>
+                     <div class="more" style="display: none;">
+                        <h1>Calle de Cava Baja</h1>
+                        <p class="title">Calle de Cava Baja</p>
+                        <p>All along this road you will find many trdtional Spanish tapas bars to enjoy!</p>
+                     </div>
+                     <button onclick="readMore('five')" class="myBtn">Read more</button>
+                  </div>
+               </div>
+               <div class="col-md-4 padding-0 d-flex align-items-stretch">
+                  <div class="locations-card card" card-num="six">
+                     <img src="assets/images/mercado.png" alt="Juan">
+                     <span class="dots"></span>
+                     <div class="more" style="display: none;">
+                        <h1>Mercado San Miguel</h1>
+                        <p class="title">Plaza San Miguel</p>
+                        <p>One of the best European markets, you can buy wholefoods, tapas and even wine.</p>
+                     </div>
+                     <button onclick="readMore('six')" class="myBtn">Read more</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--Image just above footer-->
+      <section id="footer-image-section">
+         <div class="row">
+            <div class="col-md-12">
+               <div id="footer-img"></div>
+            </div>
+         </div>
+      </section>
+      <!--Contact Form-->
+      <section>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Contact Us</h1>
+                <p>Have any more questions about Madrid? Send them here and we'll get back to you!'</p>
+            </div>
+            <div class="center-form">
+
+                <form onsubmit="return sendMail(this);">
+
+                    <input type="text" class="form-control" name="name" id="fullname" placeholder="Name" required>
+
+                    <input type="email" class="form-control" name="emailaddress" id="emailaddress" placeholder="Email" required>
+
+                    <textarea name="projectsummary" class="form-control" id="projectsummary" rows="7" cols="70" palceholder="Message" required></textarea>
+
+                    <button type="submit" class="btn btn-secondary center-block">Send Project Request</button>
+                </form>
             </div>
         </div>
       </section>
-      <section>
-        
-      </section>
-    <section>Quiz</section>
-    <section>Contact</section>
-    <footer>
+      <!--Footer-->
+      <footer>
          <ul class="social-networks">
             <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
             <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
@@ -189,25 +224,22 @@
             <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
          </ul>
       </footer>
-    
-     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/04777e1f35.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/scriptmadrid.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-</body>
+      <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+      <script
+         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+         crossorigin="anonymous"
+         ></script>
+      <script
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+         crossorigin="anonymous"
+         ></script>
+      <script
+         src="https://kit.fontawesome.com/04777e1f35.js"
+         crossorigin="anonymous"
+         ></script>
+      <script src="assets/js/scriptmadrid.js"></script>
+      <script src="assets/js/sendEmail.js"></script>
+   </body>
 </html>
