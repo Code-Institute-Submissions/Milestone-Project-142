@@ -1,7 +1,7 @@
 /*--------------------------------Fade animation on content when scrolling through page */
 const appearOptions = {
-	threshold: 0.75,
-	rootMargin: "0px 0px -50px 0px"
+	threshold: 0.4,
+	rootMargin: "0px 0px 0px 0px"
 };
 const faders = document.querySelectorAll('.fade-in');
 
