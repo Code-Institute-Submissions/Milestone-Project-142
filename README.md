@@ -1,1 +1,1 @@
-<a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md
+<a href="https://ryanjbm.github.io/Milestone-Project-2/" target="_blank">Live Project
