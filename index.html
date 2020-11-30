@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      <link rel="icon" href="#">
+      <link rel="icon" href="assets/images/madridicon.png">
       <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="assets/js/javascript.js"></script>
@@ -28,25 +28,26 @@
       <!--Back to top button-->
       <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
       <!--Navbar-->
-      <nav class="navbar navbar-expand-md sticky-top">
-         <a class="navbar-brand" href="#"><img src="assets/images/madridicon.png" alt=""></a>
-         <a class="navbar-brand" href="#">Madrid</a>
+      <div id="scroll-home"></div>
+      <nav class="navbar navbar-expand-lg sticky-top">
+         <a class="navbar-brand" href="#scroll-home"><img src="assets/images/madridicon.png" alt=""></a>
+         <a class="navbar-brand" href="#scroll-home">Madrid</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="#scroll-home">Home</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">Map</a>
+                  <a class="nav-link" href="#scroll-map">Map</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">Locations</a>
+                  <a class="nav-link" href="#scroll-locations">Locations</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#scroll-contact">Contact</a>
                </li>
             </ul>
          </div>
@@ -74,6 +75,7 @@
          </div>
       </section>
       <!--Map Section-->
+      <div id="scroll-map"></div>
       <div class="container">
          <div class="row">
             <div class="map-section col-md-12 fade-in">
@@ -84,6 +86,7 @@
       <!--Google Maps-->
       <div class="fade-in" id="map"></div>
       <!--Cards with places to Eat Section-->
+      <div id="scroll-locations"></div>
       <section class="locations-section">
          <div class="container">
             <div class="row">
@@ -194,6 +197,7 @@
          </div>
       </section>
       <!--Contact Form-->
+      <div id="scroll-contact"></div>
       <section>
         <div class="row">
             <div class="col-md-12">
