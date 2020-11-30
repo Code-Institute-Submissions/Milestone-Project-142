@@ -92,6 +92,11 @@ a {
 	transition-timing-function: ease-in-out;
 	transition-property: background-color, color;
 }
+
+    #back-to-top-btn:hover {
+	background-color: #fff;
+	color: #333;
+}
 }
 /*--------------------------------------------------Nav*/
 
