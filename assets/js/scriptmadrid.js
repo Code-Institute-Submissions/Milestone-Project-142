@@ -49,9 +49,10 @@ $(function(){
 
 function initMap() {
   var options = {
-    zoom: 12,
-    center: { lat: 40.426775, lng: -3.703790 },
+    zoom: 14,
+    center: { lat: 40.4155, lng: -3.7074 },
   };
+
 
 
 // Code as instructed by Google Documentation along with following the YouTube Tutorial by Traversy Media. Link in README
@@ -61,36 +62,58 @@ function initMap() {
 	/*Setting the coordinates of different locations in Madrid for my markers */
 	var markers = [
         {
-            latlong: {lat: 40.4530, lng: -3.6883},
-            iconImage: "assets/images/orange30.png",
-            content: "<img src='assets/images/bernabeu.png' height=60% width=60%><h4>Santiago Bernabeu</h4>"
+            latlong: {lat: 40.416433990191045, lng: -3.7068666593985657},
+            iconImage: "assets/images/100icon.png",
+            content: "<h4>100 Montaditos</h4>" 
+
+        },
+        {
+            latlong: {lat: 40.41686585276432, lng: -3.704739063563049},
+            iconImage: "assets/images/cakeicon.png",
+            content: "<h4>La Mallorquina</h4>",
+        },
+        {
+            latlong: {lat:40.41285346994623, lng:-3.709641346131572},
+            iconImage: "assets/images/cutleryicon.png",
+            content: "<h4>Astor Restaurant</h4>"
+        },
+        {
+            latlong: {lat:40.415544516331344, lng:-3.7089624863842814},
+            iconImage: "assets/images/marketicon.png",
+            content: "<h4>Mercado San Miguel</h4>",
+        },
+        {
+            latlong: {lat:40.4127662769096, lng:-3.7090535171599766},
+            iconImage: "assets/images/tapasicon.png",
+            content: "<h4>Calle Cava Baja</h4>",
         },
         {
             latlong: {lat: 40.4153, lng: -3.6845},
-            iconImage: "assets/images/orange30.png",
-            content: "<img src='assets/images/retiro.png' height=60% width=60%><h4>Retiro Park</h4>",
+            iconImage: "assets/images/icon.png",
+            content: "<h4>Retiro Park</h4>",
         },
         {
             latlong: {lat: 40.4017, lng: -3.7206},
-            iconImage: "assets/images/orange30.png",
-            content: "<img src='assets/images/calderon.png' height=60% width=60%><h4>Estadio Calderon</h4>",
+            iconImage: "assets/images/icon.png",
+            content: "<h4>Estadio Calderon</h4>",
         },
         {
             latlong: {lat: 40.4180, lng: -3.7143},
-            iconImage: "assets/images/orange30.png",
-            content: "<img src='assets/images/madridmain.png' height=60% width=60%><h4>Royal Palace</h4>",
+            iconImage: "assets/images/icon.png",
+            content: "<h4>Royal Palace</h4>",
         },
         {
             latlong: {lat: 40.4200, lng: -3.7021},
-            iconImage: "assets/images/orange30.png",
-            content: "<img src='assets/images/granvia.png' height=60% width=60%><h4>Gran Via</h4>",
+            iconImage: "assets/images/icon.png",
+            content: "<h4>Gran Via</h4>",
         },
 		{
             latlong: {lat: 40.4155, lng: -3.7074},
-            iconImage: "assets/images/orange30.png",
-            content: "<img src='assets/images/plazamayor.png' height=60% width=60%><h4>Plaza Mayor</h4>",
+            iconImage: "assets/images/icon.png",
+            content: "<h4>Plaza Mayor</h4>",
         },
 	];
+
 
 for (var i = 0; i < markers.length; i++) {
     addMarker(markers[i]);
@@ -118,7 +141,7 @@ function addMarker(props) {
         });
     }
 }
-
+}
 
 
 
@@ -158,6 +181,6 @@ function sendMail(contactForm){
     );
     return false;
 }
-}
+
 
 
