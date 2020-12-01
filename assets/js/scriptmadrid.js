@@ -46,46 +46,81 @@ $(function(){
 
 /*---------------------------------------Google Maps API */
 
-let map;
-/*Function calling google maps and center coordinates of Madrid */
+
 function initMap() {
-	map = new google.maps.Map(document.getElementById("map"), {
-		center: {
-			lat: 40.426775,
-			lng: -3.703790
-		},
-		zoom: 13,
-	});
+  var options = {
+    zoom: 12,
+    center: { lat: 40.426775, lng: -3.703790 },
+  };
+
+
+// Code as instructed by Google Documentation along with following the YouTube Tutorial by Traversy Media. Link in README
+
+  var map = new google.maps.Map(document.getElementById("map"), options);
+
 	/*Setting the coordinates of different locations in Madrid for my markers */
-	var locations = [
-		['<b>Santiago Bernabeu</b>' + "<br>Real Madrid's Stadium <br><img src='assets/images/bernabeu.png' alt='' width='250px' height='150px'><br><a class='nav-items' href='https://www.realmadrid.com/en'><b>VISIT REAL MADRID WEBSITE</b></a>", 40.4530, -3.6883, 4],
-		['<b>Retiro Park</b>' + "<br>One of the largest and prettiest parks in all of Madrid <br><img src='assets/images/retiro.png' alt='' width='300px' height='150px'>", 40.4153, -3.6845, 6],
-		['<b>Vicente Calderon</b>' + "<br>Atletico Madrid's Stadium" + "<br><img src='assets/images/calderon.png' alt='' width='300px' height='150px'>", 40.4017, -3.7206, 5],
-		['<b>Royal Palace</b>' + '<br>Home to the Spanish Royal Family' + "<br><img src='assets/images/madridmain.png' alt='' width='300px' height='150px'>", 40.4180, -3.7143, 3],
-		['<b>Gran Via</b>' + '<br>Main Shoping high street in Madrid' + "<br><img src='assets/images/granvia.png' alt='' width='300px' height='200px'>", 40.4200, -3.7021, 2],
-		["<b>Plaza Mayor</b>" + "<br>Most famous plaza in all of spain<br> located in the center of Madrid with many restaurants" + "<br><img src='assets/images/plazamayor.png' alt='' width='300px' height='150px'>", 40.4155, -3.7074, 1]
+	var markers = [
+        {
+            latlong: {lat: 40.4530, lng: -3.6883},
+            iconImage: "assets/images/orange30.png",
+            content: "<img src='assets/images/bernabeu.png' height=60% width=60%><h4>Santiago Bernabeu</h4>"
+        },
+        {
+            latlong: {lat: 40.4153, lng: -3.6845},
+            iconImage: "assets/images/orange30.png",
+            content: "<img src='assets/images/retiro.png' height=60% width=60%><h4>Retiro Park</h4>",
+        },
+        {
+            latlong: {lat: 40.4017, lng: -3.7206},
+            iconImage: "assets/images/orange30.png",
+            content: "<img src='assets/images/calderon.png' height=60% width=60%><h4>Estadio Calderon</h4>",
+        },
+        {
+            latlong: {lat: 40.4180, lng: -3.7143},
+            iconImage: "assets/images/orange30.png",
+            content: "<img src='assets/images/madridmain.png' height=60% width=60%><h4>Royal Palace</h4>",
+        },
+        {
+            latlong: {lat: 40.4200, lng: -3.7021},
+            iconImage: "assets/images/orange30.png",
+            content: "<img src='assets/images/granvia.png' height=60% width=60%><h4>Gran Via</h4>",
+        },
+		{
+            latlong: {lat: 40.4155, lng: -3.7074},
+            iconImage: "assets/images/orange30.png",
+            content: "<img src='assets/images/plazamayor.png' height=60% width=60%><h4>Plaza Mayor</h4>",
+        },
 	];
 
-	var infowindow = new google.maps.InfoWindow();
-	/*Changing the marker icon image */
-	var marker, i;
-	const image = src = 'assets/images/orange30.png';
-	for (i = 0; i < locations.length; i++) {
-		marker = new google.maps.Marker({
-			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-			map: map,
-			icon: image
-		});
-		/*Opens mini info window when clicking on each marker*/
-		google.maps.event.addListener(marker, 'click', (function (marker, i) {
-			return function () {
-				infowindow.setContent(locations[i][0]);
-				infowindow.open(map, marker);
-			}
-		})(marker, i));
-	}
+for (var i = 0; i < markers.length; i++) {
+    addMarker(markers[i]);
+  }
 
+function addMarker(props) {
+    var marker = new google.maps.Marker({
+        position: props.latlong,
+        map: map,
+    });
+
+    if (props.iconImage) {
+        marker.setIcon(props.iconImage);
+        }
+
+    if (props.content) {
+        var infoWindow = new google.maps.InfoWindow({
+            content: props.content,
+        });
+    
+
+        marker.addListener("click", function(){
+            infoWindow.open(map, marker);
+            
+        });
+    }
 }
+
+
+
 
 /*----------------------------------Read more function*/
 function readMore(city) {
@@ -123,6 +158,6 @@ function sendMail(contactForm){
     );
     return false;
 }
-
+}
 
 

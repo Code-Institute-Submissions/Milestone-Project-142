@@ -9,6 +9,7 @@
          defer
          ></script>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link href="dist/hamburgers.css" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
       <link rel="icon" href="assets/images/madridicon.png">
@@ -33,7 +34,7 @@
          <a class="navbar-brand" href="#scroll-home"><img src="assets/images/madridicon.png" alt=""></a>
          <a class="navbar-brand navbar-brand-text" href="#scroll-home">Madrid</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+         <span class="navbar-toggler-icon icon-bar"><i class="fas fa-bars"></i></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -84,6 +85,12 @@
          </div>
       </div>
       <!--Google Maps-->
+      <input
+            class="form-control"
+            id="search"
+            type="text"
+            placeholder="Search..."
+        />
       <div class="fade-in" id="map"></div>
       <!--Cards with places to Eat Section-->
       <div id="scroll-locations"></div>
@@ -92,6 +99,7 @@
             <div class="row">
                <div class="col-md-12 fade-in">
                   <h1>Places to Eat</h1>
+                   
                </div>
             </div>
          </div>
@@ -198,7 +206,7 @@
       </section>
       <!--Contact Form-->
       <div id="scroll-contact"></div>
-      <section>
+      <section id="contact-section">
         <div class="row">
             <div class="col-md-12">
                 <h1>Contact Us</h1>
