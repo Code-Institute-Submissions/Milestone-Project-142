@@ -297,15 +297,19 @@ body {
     background-color:#e6e6e6;
 }
 
-.locations-card img {
+.locations-card-img {
 	height: 250px;
 	width: 100%;
 }
 
 .locations-link {
-    text-align:center;
-	color: green;
-	font-size: 1rem;
+    text-align:center !important;
+	color: green !important;
+	font-size: 1rem !important;
+}
+
+.locations-link:hover{
+    color: orange;
 }
 
 .locations-card p {
@@ -330,11 +334,6 @@ body {
 	color: orange !important;
 }
 
-.locations-card a {
-	float: left;
-	font-size: 1rem;
-	color: black !important;
-}
 
 .padding-0 {
 	padding-right: 0;

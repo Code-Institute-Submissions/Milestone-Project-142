@@ -122,6 +122,7 @@ const iconBase = src="assets/images/";
     {
       position: new google.maps.LatLng(40.4155, -3.7074), //Plaza Mayor
       type: "landmark",
+      place: "Plaza Mayor",
     },
   ];
   features.forEach((feature) => {
@@ -131,6 +132,9 @@ const iconBase = src="assets/images/";
       map: map,
     });
   });
+
+
+
   const legend = document.getElementById("legend");
 
   for (const key in icons) {
