@@ -47,102 +47,102 @@ $(function(){
 /*---------------------------------------Google Maps API */
 
 
+let map;
+
 function initMap() {
-  var options = {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 14,
-    center: { lat: 40.4155, lng: -3.7074 },
+    center: new google.maps.LatLng(40.4155, -3.7074),
+    mapTypeId: "roadmap",
+  });
+const iconBase = src="assets/images/";
+  const icons = {
+    montaditos: {
+        name: "100 Montaditos",
+        icon: iconBase + "100icon.png",
+    },
+    mallorquina: {
+        name: "La Mallorquina",
+        icon: iconBase + "cakeicon.png",
+    },
+    astor: {
+      name: "Astor Restaurant",
+      icon: iconBase + "cutleryicon.png",
+    },
+    sanmiguel: {
+        name: "Mercado San Miguel",
+        icon: iconBase + "marketicon.png",
+    },
+    cavabaja: {
+        name: "Calle Cava Baja",
+        icon: iconBase + "tapasicon.png",
+    },
+    landmark: {
+      name: "Landmark",
+      icon: iconBase + "icon.png",
+    },
   };
-
-
-
-// Code as instructed by Google Documentation along with following the YouTube Tutorial by Traversy Media. Link in README
-
-  var map = new google.maps.Map(document.getElementById("map"), options);
-
-	/*Setting the coordinates of different locations in Madrid for my markers */
-	var markers = [
-        {
-            latlong: {lat: 40.416433990191045, lng: -3.7068666593985657},
-            iconImage: "assets/images/100icon.png",
-            content: "<h4>100 Montaditos</h4>" 
-
-        },
-        {
-            latlong: {lat: 40.41686585276432, lng: -3.704739063563049},
-            iconImage: "assets/images/cakeicon.png",
-            content: "<h4>La Mallorquina</h4>",
-        },
-        {
-            latlong: {lat:40.41285346994623, lng:-3.709641346131572},
-            iconImage: "assets/images/cutleryicon.png",
-            content: "<h4>Astor Restaurant</h4>"
-        },
-        {
-            latlong: {lat:40.415544516331344, lng:-3.7089624863842814},
-            iconImage: "assets/images/marketicon.png",
-            content: "<h4>Mercado San Miguel</h4>",
-        },
-        {
-            latlong: {lat:40.4127662769096, lng:-3.7090535171599766},
-            iconImage: "assets/images/tapasicon.png",
-            content: "<h4>Calle Cava Baja</h4>",
-        },
-        {
-            latlong: {lat: 40.4153, lng: -3.6845},
-            iconImage: "assets/images/icon.png",
-            content: "<h4>Retiro Park</h4>",
-        },
-        {
-            latlong: {lat: 40.4017, lng: -3.7206},
-            iconImage: "assets/images/icon.png",
-            content: "<h4>Estadio Calderon</h4>",
-        },
-        {
-            latlong: {lat: 40.4180, lng: -3.7143},
-            iconImage: "assets/images/icon.png",
-            content: "<h4>Royal Palace</h4>",
-        },
-        {
-            latlong: {lat: 40.4200, lng: -3.7021},
-            iconImage: "assets/images/icon.png",
-            content: "<h4>Gran Via</h4>",
-        },
-		{
-            latlong: {lat: 40.4155, lng: -3.7074},
-            iconImage: "assets/images/icon.png",
-            content: "<h4>Plaza Mayor</h4>",
-        },
-	];
-
-
-for (var i = 0; i < markers.length; i++) {
-    addMarker(markers[i]);
-  }
-
-function addMarker(props) {
-    var marker = new google.maps.Marker({
-        position: props.latlong,
-        map: map,
+  const features = [
+    {
+      position: new google.maps.LatLng(40.416433990191045, -3.7068666593985657),
+      type: "montaditos",
+    },
+    {
+      position: new google.maps.LatLng(40.41686585276432, -3.704739063563049),
+      type: "mallorquina",
+    },
+    {
+      position: new google.maps.LatLng(40.41285346994623, -3.709641346131572),
+      type: "astor",
+    },
+    {
+      position: new google.maps.LatLng(40.415544516331344, -3.7089624863842814),
+      type: "sanmiguel",
+    },
+    {
+      position: new google.maps.LatLng(40.4127662769096, -3.7090535171599766),
+      type: "cavabaja",
+    },
+    {
+      position: new google.maps.LatLng(40.4153, -3.6845), //Retiro Park
+      type: "landmark",
+    },
+    {
+      position: new google.maps.LatLng(40.4017, -3.7206), //Calderon
+      type: "landmark",
+    },
+    {
+      position: new google.maps.LatLng(40.4180, -3.7143), //Royal Palace
+      type: "landmark",
+    },
+    {
+      position: new google.maps.LatLng(40.4200, -3.7021), //Gran Via
+      type: "landmark",
+    },
+    {
+      position: new google.maps.LatLng(40.4155, -3.7074), //Plaza Mayor
+      type: "landmark",
+    },
+  ];
+  features.forEach((feature) => {
+    new google.maps.Marker({
+      position: feature.position,
+      icon: icons[feature.type].icon,
+      map: map,
     });
+  });
+  const legend = document.getElementById("legend");
 
-    if (props.iconImage) {
-        marker.setIcon(props.iconImage);
-        }
-
-    if (props.content) {
-        var infoWindow = new google.maps.InfoWindow({
-            content: props.content,
-        });
-    
-
-        marker.addListener("click", function(){
-            infoWindow.open(map, marker);
-            
-        });
-    }
+  for (const key in icons) {
+    const type = icons[key];
+    const name = type.name;
+    const icon = type.icon;
+    const div = document.createElement("div");
+    div.innerHTML = '<img src="' + icon + '"> ' + name;
+    legend.appendChild(div);
+  }
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
 }
-}
-
 
 
 /*----------------------------------Read more function*/
