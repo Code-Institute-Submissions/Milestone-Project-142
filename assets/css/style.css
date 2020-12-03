@@ -153,7 +153,7 @@ a:hover{
 
 #hero {
 	width: 100%;
-	height: 900px;
+	height: 600px;
 	background: linear-gradient(180deg, rgba(37, 21, 20, 0.3) 99.99%, rgba(255, 255, 255, 0) 100%), url(../images/madridhero.png)no-repeat center center;
 }
 
@@ -163,6 +163,74 @@ a:hover{
 	font-size: 6rem;
 	transform: rotate(-10deg);
 }
+
+.bottom{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.info-hero:hover{
+    color:orange;
+    cursor: default;
+}
+
+.bottom-arrow{
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scroll-left {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ background: rgb(29, 29, 29);
+ color: white;
+}
+.scroll-left p {
+font-family: 'Padauk', sans-serif;
+ position: absolute;
+ width: 300%;
+ height: 100%;
+ margin: 0;
+ top:25%;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(1%);
+ /* Apply animation to this element */	
+ -moz-animation: scroll-left 30s linear infinite;
+ -webkit-animation: scroll-left 30s linear infinite;
+ animation: scroll-left 30s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(1%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%); 
+ }
+}
+
 
 @media screen and (max-width: 1100px){
 
@@ -374,8 +442,6 @@ body {
     width:70%;
 }
 
-
-
 .center-form {
     padding-top: 10px;
     margin: 0 auto;
@@ -430,54 +496,5 @@ footer {
 }
 
 /*----------------------------------------------Test Area*/
-.example1 {
-    font-size: 0.5rem;
-    background-color:#fafafa;
-    height: 50px;  
-    overflow: hidden;
-    position: relative;
-    border: 2px solid;
-}
-.example1 h3 {
- font-size: 3em;
- color: black;
- position: absolute;
- width: 100%;
- height: 100%;
- margin: 0;
- line-height: 50px;
- text-align: center;
- /* Starting position */
- -moz-transform:translateX(100%);
- -webkit-transform:translateX(100%);  
- transform:translateX(100%);
- /* Apply animation to this element */  
- -moz-animation: example1 15s linear infinite;
- -webkit-animation: example1 15s linear infinite;
- animation: example1 15s linear infinite;
-}
-/* Move it (define the animation) */
-@-moz-keyframes example1 {
- 0%   { -moz-transform: translateX(100%); }
- 100% { -moz-transform: translateX(-100%); }
-}
-@-webkit-keyframes example1 {
- 0%   { -webkit-transform: translateX(100%); }
- 100% { -webkit-transform: translateX(-100%); }
-}
-@keyframes example1 {
- 0%   { 
- -moz-transform: translateX(100%); /* Firefox bug fix */
- -webkit-transform: translateX(100%); /* Firefox bug fix */
- transform: translateX(100%);     
- }
- 100% { 
- -moz-transform: translateX(-100%); /* Firefox bug fix */
- -webkit-transform: translateX(-100%); /* Firefox bug fix */
- transform: translateX(-100%); 
- }
-}
-
-
 
 
