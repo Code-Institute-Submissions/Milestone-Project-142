@@ -183,4 +183,9 @@ function sendMail(contactForm){
 }
 
 
+/*Allows alert to show message has been sent*/
+
+function alertFunction() {
+    alert("Message has been sent!");
+}
 
