@@ -380,17 +380,27 @@ body {
 }
 
 #eat-sep {
+     transition: transform .4s;
 	width: 100%;
     height:400px;
 	background: linear-gradient(180deg, rgba(37, 21, 20, 0.3) 99.99%, rgba(255, 255, 255, 0) 100%), url(../images/test.png)no-repeat center center;
 }
 
+#eat-sep:hover {
+    transform: scale(1.05);
+}
+
 
 
 #visit-sep {
+    transition: transform .4s;
 	width: 100%;
     height:400px;
 	background: linear-gradient(180deg, rgba(37, 21, 20, 0.3) 99.99%, rgba(255, 255, 255, 0) 100%), url(../images/visithero.png)no-repeat center center;
+}
+
+#visit-sep:hover{
+    transform: scale(1.05);
 }
 
 
@@ -410,8 +420,13 @@ body {
 }
 
 .locations-card-img {
+    transition: transform .4s;
 	height: 250px;
 	width: 100%;
+}
+
+.locations-card-img:hover{
+    transform: scale(1.05);
 }
 
 .locations-link {
@@ -434,7 +449,7 @@ body {
 	display: inline-block;
 	padding: 8px;
 	color: white;
-	background-color: green !important;
+	background-color: rgb(29, 29, 29); !important;
 	text-align: center;
 	cursor: pointer;
 	width: 100%;
@@ -442,6 +457,7 @@ body {
 }
 
 .locations-card button:hover {
+    background-color: rgb(29, 29, 29); !important;
 	opacity: 0.7;
 	color: orange !important;
 }
@@ -495,13 +511,13 @@ body {
 button[type="submit"] {
     margin-top: 15px;
     margin-bottom: 20px;
-    background-color: green;
+    background-color: rgb(29, 29, 29);
     color: #fafafa;
 }
 
 button[type="submit"]:hover{
     color:orange;
-    background-color:green;
+    background-color: rgb(29, 29, 29);
 }
 
 @media screen and (max-width: 1300px){
