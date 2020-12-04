@@ -49,13 +49,16 @@ $(function(){
 
 
 let map;
-
+const mediaQuery = window.matchMedia('(min-width: 1000px)')
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
-    center: new google.maps.LatLng(40.41803060293938, -3.6993609595496166),
+    center: new google.maps.LatLng(40.41733521420438, -3.7065231865401853),
     mapTypeId: "roadmap",
   });
+
+
+
 const iconBase = src="assets/images/";
   const icons = {
     montaditos: {
@@ -163,6 +166,8 @@ function addMarker(feature) {
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
 /*----------------------------------Read more function*/
 function readMore(city) {
 	let dots = document.querySelector(`.card[card-num="${city}"] .dots`);
