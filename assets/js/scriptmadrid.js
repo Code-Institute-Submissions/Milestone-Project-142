@@ -21,6 +21,7 @@ faders.forEach(fader => {
 	appearOnScroll.observe(fader);
 })
 
+
 /*---------------------------------Back to top button */
 backToTopButton = document.querySelector('#back-to-top-btn');
 
@@ -211,4 +212,3 @@ function sendMail(contactForm){
 function alertFunction() {
     alert("Message has been sent!");
 }
-
