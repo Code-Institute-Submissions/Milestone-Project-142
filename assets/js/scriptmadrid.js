@@ -62,16 +62,8 @@ function initMap() {
 
 const iconBase = src="assets/images/";
   const icons = {
-    montaditos: {
-        name: "100 Montaditos",
-        icon: iconBase + "100icon.png",
-    },
-    mallorquina: {
-        name: "La Mallorquina",
-        icon: iconBase + "cakeicon.png",
-    },
-    astor: {
-      name: "Astor Restaurant",
+    restaurant: {
+      name: "Restaurant",
       icon: iconBase + "cutleryicon.png",
     },
     sanmiguel: {
@@ -106,17 +98,17 @@ function addMarker(feature) {
   const features = [
     {
       position: new google.maps.LatLng(40.41963937438271, -3.710712092531764),
-      type: "montaditos",
+      type: "restaurant",
       infoContent: "<h2 class='locations-link'>100 Montaditos</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/Cervecer%C3%ADa+100+Montaditos/@40.4177444,-3.7105404,15z/data=!4m8!1m2!2m1!1s100+montaditos!3m4!1s0x0:0x7669f25b6792ab75!8m2!3d40.4187259!4d-3.7108389' >Calle de Felipe V, 4, 28013</a>",
     },
     {
       position: new google.maps.LatLng(40.41686585276432, -3.704739063563049),
-      type: "mallorquina",
+      type: "restaurant",
       infoContent: "<h2 class='locations-link'>La Mallorquina</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/La+Mallorquina/@40.4177437,-3.7105404,15z/data=!3m1!5s0xd42287e6125da65:0xd208870869ee8b84!4m8!1m2!2m1!1sla+mallorquina!3m4!1s0xd42287e69d15b8d:0x1501ee0d7d619ce7!8m2!3d40.4166836!4d-3.704775' >Puerta del Sol, 8, 28013</a>",
     },
     {
       position: new google.maps.LatLng(40.41285346994623, -3.709641346131572),
-      type: "astor",
+      type: "restaurant",
       infoContent: "<h2 class='locations-link'>Astor Restaurant</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/%C3%81stor+gastro-place/@40.412688,-3.711754,17z/data=!3m1!4b1!4m5!3m4!1s0xd4227d62756f371:0x80a15bc585f4b264!8m2!3d40.412688!4d-3.7095653' >Calle del Almendro, 9, 28005</a>",
     },
     {
