@@ -50,4 +50,45 @@ After some experimentation and changes throughout the design and building proces
 <img src="assets/images/figma.png">
 
 Throughout the process of coding my website and input from other people, a few improvements were made to the website to not only make it look more professional but also to include more useful features.
+
+
+# Features
+
+### Features throughout page
+* Collapsible Navigation Bar which is stuck to the top of the page, once scrolling menu becomes slightly opaque
+* Back to top button in bottom right corner of the page, stays on screen whole time
+* Images throughout the page zoom in when mouse hovers over them
+
+### Nav Bar
+* Collapsable Nav Bar
+* Text turns green on hover
+* When clicked scrolls down to section on page
+
+### Hero Section
+* Background hero image of Madrid with overlay text, event info with arrow overlay at the bottom
+* Scrolling text underneath the image showing event information
+
+### Map
+* Google Map api used
+* Legend showing what each custom marker image stands for, on mobile legend appears below
+* When clicking each marker info window shows with name of place and link to google maps directions for the place
+
+### Places to eat & visit
+* Separating images with overlay text zoom on hover
+* Card images zoom on hover
+* Read more buttons show text when clicked and button changes to say Read Less, text colour changes when hovering over
+* Link scrolling up to map when clicked
+* When clicking on image redirects to the website of restaurant or website wth information about place to visit
+
+### Contact Form
+* Email js api used
+* Checks all fields are filled before alllowing to submit
+* Once submitted alert box opens showing message has been sent
+* Page refreshes afterwards
+* Functional contact form which sends email to my account, showing who sent the email
+
+
+
+
+
   
