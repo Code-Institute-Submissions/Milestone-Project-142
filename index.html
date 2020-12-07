@@ -4,41 +4,39 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Madrid</title>
-      <script
-         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl_2yZV7SOaNuQLQcxgZSew9-jX6hpkA&callback=initMap&libraries=&v=weekly"
-         defer
-         ></script>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-      <link href="dist/hamburgers.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      <link rel="icon" href="assets/images/madridicon.png">
-      <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="assets/js/javascript.js"></script>
 
-<!--Email.js function-->
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_dgvKRCTSsUV8gAd5MyAFt");
-   })();
-</script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+      <link rel="icon" href="assets/images/madridicon.png">
+
+      <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
    </head>
    <body>
+
       <!--Back to top button-->
+
       <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
       <!--Navbar-->
+
       <div id="scroll-home"></div>
       <nav class="navbar navbar-expand-lg sticky-top">
-      <!--Navbar brand(logo and Madrid text)-->
+
+         <!--Navbar brand(logo and Madrid text)-->
+
          <a class="navbar-brand" href="#scroll-home"><img src="assets/images/madridicon.png" alt="Madrid Icon"></a>
          <a class="navbar-brand navbar-brand-text" href="#scroll-home">Madrid</a>
+
          <!--Toggle button when collapsed-->
+
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon icon-bar"><i class="fas fa-bars"></i></span>
          </button>
+
          <!--Menu items-->
+
          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                <li class="nav-item">
@@ -56,22 +54,27 @@
             </ul>
          </div>
       </nav>
+
       <!--Hero Image Section-->
-        <div class="container-eat">
-            <div class="fade-in" id="hero"></div>
-            <div class="centered"><h1 id="hero-title">Madrid</h1></div>
-            <div class="info-hero">
-            <div class="bottom"><p>event info</p></div>
-            <div class="bottom-arrow"><i class="fas fa-angle-double-down"></i></div>
+
+      <div class="container-eat">
+         <div class="fade-in" id="hero"></div>
+         <div class="centered">
+            <h1 id="hero-title">Madrid</h1>
+         </div>
+         <div class="info-hero">
+            <div class="bottom">
+               <p>event info</p>
             </div>
-              <div class="scroll-left">
-                    <p>EVENTS: CHANGING OF GUARD, FLAMENCO (TEATRO ALIFI), CHRISTMAS MARKET PLAZA MAYOR, MEM FESTIVAL</p>
-                </div>
-        </div>
-
-
+            <div class="bottom-arrow"><i class="fas fa-angle-double-down"></i></div>
+         </div>
+         <div class="scroll-left">
+            <p>EVENTS: CHANGING OF GUARD, FLAMENCO (TEATRO ALIFI), CHRISTMAS MARKET PLAZA MAYOR, MEM FESTIVAL</p>
+         </div>
+      </div>
 
       <!--About Section-->
+
       <section id="about">
          <div class="container">
             <div class="row">
@@ -82,31 +85,40 @@
             </div>
          </div>
       </section>
-            <!--Map Section-->
+
+      <!--Map Section-->
 
       <div id="scroll-map"></div>
       <div class="container">
          <div class="row">
             <div class="map-section col-md-12 fade-in">
-               <h1>Explore Madrid</h1>
+               <h1>Map</h1>
             </div>
          </div>
       </div>
+
       <!--Google Maps-->
-      
+
       <div class="fade-in" id="map"></div>
-      <div id="legend"><h3>Legend</h3></div>
+      <div id="legend">
+         <h3>Legend</h3>
+      </div>
       <div id="legend2">
-        <h3 id="legend-title">Legend</h3>
-        <p> Restaurant: <img src="https://img.icons8.com/pastel-glyph/30/000000/cutlery.png" alt="Cutlery icon"/> Landmark: <img src="https://img.icons8.com/fluent/30/000000/location-update.png" alt="Landmark Icon"/> Calle Cava Baja: <img src="https://img.icons8.com/cotton/30/000000/salami.png" alt="Tapas Icon"/> Mercado San Miguel <img src="https://img.icons8.com/cotton/30/000000/kiosk-on-wheels--v1.png" alt="Market Icon"/></p>
+         <h3 id="legend-title">Legend</h3>
+         <p> Restaurant: <img src="https://img.icons8.com/pastel-glyph/30/000000/cutlery.png" alt="Cutlery icon"/> Landmark: <img src="https://img.icons8.com/fluent/30/000000/location-update.png" alt="Landmark Icon"/> Calle Cava Baja: <img src="https://img.icons8.com/cotton/30/000000/salami.png" alt="Tapas Icon"/> Mercado San Miguel <img src="https://img.icons8.com/cotton/30/000000/kiosk-on-wheels--v1.png" alt="Market Icon"/></p>
       </div>
       <!--Cards with places to Eat Section-->
       <div class="container-eat">
-      <!--Title Picture-->
-        <div class="fade-in" id="eat-sep"></div>
-        <div class="centered">Places to Dine</div>
-        </div>
-      <div id="scroll-locations"></div> <!--Allows menu to scroll down to this point-->
+
+         <!--Title Picture-->
+
+         <div class="fade-in" id="eat-sep"></div>
+         <div class="centered">Places to Dine</div>
+      </div>
+      <div id="scroll-locations"></div>
+
+      <!--Allows menu to scroll down to this point-->
+
       <section class="locations-section">
          <div class="container">
             <div class="row">
@@ -114,7 +126,9 @@
          </div>
          <div class="container">
             <div class="row fade-in">
-            <!--100 Montaditos Card-->
+
+               <!--100 Montaditos Card-->
+
                <div class=" col-md-4 padding-0 d-flex align-items-stretch" >
                   <div class="locations-card card" card-num = "one">
                      <a href="https://spain.100montaditos.com/en/" target="_blank"><img class="locations-card-img" src="assets/images/montaditos2.png" alt="Montaditos" ></a>
@@ -129,7 +143,9 @@
                      <button onclick="readMore('one')" class="myBtn">Read more</button>
                   </div>
                </div>
+
                <!--La Mallorquina Card-->
+
                <div class="col-md-4 padding-0 d-flex align-items-stretch">
                   <div class="locations-card card" card-num="two">
                      <a href="https://pastelerialamallorquina.es/" target="_blank"><img class="locations-card-img" src="assets/images/mallorquin.png" alt="La Mallorquina"></a>
@@ -138,12 +154,15 @@
                         <h1>La Mallorquina</h1>
                         <a class="locations-link" href="#scroll-map">Look for me on the map!<img src="https://img.icons8.com/cute-clipart/30/000000/cake.png" alt="Cake icon"/></a>
                         <p>
-                            <br>Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!</p>
+                           <br>Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!
+                        </p>
                      </div>
                      <button onclick="readMore('two')" class="myBtn">Read more</button>
                   </div>
                </div>
+
                <!--Astor Restaurant Card-->
+
                <div class="col-md-4 padding-0 d-flex align-items-stretch">
                   <div class="locations-card card" card-num="three">
                      <a href="https://astor.es/en/" target="_blank"><img class="locations-card-img" src="assets/images/astor.png" alt="Astor Restaurant"></a>
@@ -159,29 +178,37 @@
             </div>
          </div>
       </section>
+
       <!--Card with places to visit section-->
+
       <div class="container-eat">
-      <!--Title card-->
-        <div class="fade-in" id="visit-sep"></div>
-        <div class="centered">Places to See</div>
-        </div>
+
+         <!--Title card-->
+
+         <div class="fade-in" id="visit-sep"></div>
+         <div class="centered">Places to See</div>
+      </div>
       <section class="locations-section">
          <div class="container">
             <div class="row fade-in">
-            <!--Puerta del sol card-->
+
+               <!--Puerta del sol card-->
+
                <div class="col-md-4 padding-0 d-flex align-items-stretch">
                   <div class="locations-card card" card-num="four">
                      <a href="https://www.esmadrid.com/en/tourist-information/puerta-del-sol" target="_blank"><img class="locations-card-img" src="assets/images/sol.png" alt="Puerta Del Sol" ></a>
                      <span class="dots"></span>
                      <div class="more" style="display: none;">
                         <h1>Puerta del sol</h1>
-                    <a class="locations-link" href="#scroll-map">Look for me on the map! <img src="https://img.icons8.com/fluent/30/000000/location-update.png" alt="Sol Icon"/></a>
+                        <a class="locations-link" href="#scroll-map">Look for me on the map! <img src="https://img.icons8.com/fluent/30/000000/location-update.png" alt="Sol Icon"/></a>
                         <p>This plaza is located in the center of Madrid next to shops and restaurants.</p>
                      </div>
                      <button onclick="readMore('four')" class="myBtn">Read more</button>
                   </div>
                </div>
+
                <!--Calle Cava Baja Card-->
+
                <div class="col-md-4 padding-0 d-flex align-items-stretch">
                   <div class="locations-card card" card-num="five">
                      <a href="https://spainrevealed.com/blog/best-tapas-bars-cava-baja/" target="_blank"><img class="locations-card-img" src="assets/images/cava.png" alt="Emily"></a>
@@ -194,7 +221,9 @@
                      <button onclick="readMore('five')" class="myBtn">Read more</button>
                   </div>
                </div>
+
                <!--Mercado San Miguel Card-->
+
                <div class="col-md-4 padding-0 d-flex align-items-stretch">
                   <div class="locations-card card" card-num="six">
                      <a href="https://mercadodesanmiguel.es/en/" target="_blank"><img class="locations-card-img" src="assets/images/mercado.png" alt="Mercado San Miguel"></a>
@@ -210,7 +239,9 @@
             </div>
          </div>
       </section>
+
       <!--Image just above footer-->
+
       <section id="footer-image-section">
          <div class="row">
             <div class="col-md-12">
@@ -218,30 +249,29 @@
             </div>
          </div>
       </section>
+
       <!--Contact Form-->
+
       <div id="scroll-contact"></div>
       <section id="contact-section">
-        <div class="row">
+         <div class="row">
             <div class="col-md-12">
-                <h1>Contact Us</h1>
-                <p>Have any more questions about Madrid? Send them here and we'll get back to you!'</p>
+               <h1>Contact Us</h1>
+               <p>Have any more questions about Madrid? Send them here and we'll get back to you!'</p>
             </div>
             <div class="center-form">
-
-                <form onsubmit="return sendMail(this), alertFunction();" >
-
-                    <input type="text" class="form-control" name="name" id="fullname" placeholder="Name" required>
-
-                    <input type="email" class="form-control" name="emailaddress" id="emailaddress" placeholder="Email" required>
-
-                    <textarea name="projectsummary" class="form-control" id="projectsummary" rows="7" cols="70" required></textarea>
-
-                    <button id="sendmessage" value="sendMessage" type="submit" class="btn btn-secondary center-block">Send Message</button>
-                </form>
+               <form onsubmit="return sendMail(this), alertFunction();" >
+                  <input type="text" class="form-control" name="name" id="fullname" placeholder="Name" required>
+                  <input type="email" class="form-control" name="emailaddress" id="emailaddress" placeholder="Email" required>
+                  <textarea name="projectsummary" class="form-control" id="projectsummary" rows="7" cols="70" required></textarea>
+                  <button id="sendmessage" value="sendMessage" type="submit" class="btn btn-secondary center-block">Send Message</button>
+               </form>
             </div>
-        </div>
+         </div>
       </section>
+
       <!--Footer-->
+
       <footer>
          <ul class="social-networks">
             <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -250,22 +280,37 @@
             <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
          </ul>
       </footer>
-      <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+        <!--Script Tags-->
+        
+      <script src="assets/js/scriptmadrid.js"></script>
+
+      <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+
+        <!--Email.js function-->
+
+      <script type="text/javascript">
+         (function(){
+            emailjs.init("user_dgvKRCTSsUV8gAd5MyAFt");
+         })();
+      </script>
+
       <script
          src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
          crossorigin="anonymous"
          ></script>
+
       <script
          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
          crossorigin="anonymous"
          ></script>
+
       <script
-         src="https://kit.fontawesome.com/04777e1f35.js"
-         crossorigin="anonymous"
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl_2yZV7SOaNuQLQcxgZSew9-jX6hpkA&callback=initMap&libraries=&v=weekly"
+         defer
          ></script>
-      <script src="assets/js/scriptmadrid.js"></script>
-      <script src="assets/js/sendEmail.js"></script>
+
    </body>
 </html>
