@@ -139,7 +139,14 @@ a:hover {
 	}
 }
 
-
+@media screen and (max-width: 340px) {
+    .navbar-brand-text{
+        font-size:2rem;
+    }
+    .navbar-toggler-icon{
+        padding-top:6px;
+    }
+}
 /*--------------------------------------------------Hero Image*/
 
 #hero-section {
@@ -275,12 +282,11 @@ a:hover {
 	}
 }
 
-@media screen and (max-width: 1100px) {
-	#cover h1 {
-		margin-left: 10%;
-		text-align: left;
+
+
+@media screen and (max-width: 340px) {
+    #hero-title {
 		font-size: 5rem;
-		transform: rotate(-10deg);
 	}
 }
 
@@ -506,7 +512,7 @@ body {
 
 @media screen and (max-width: 1000px) {
 	.locations-card {
-		max-width: 95%;
+		width: 100%;
 	}
 }
 
