@@ -165,9 +165,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 /*----------------------------------Read more function*/
 function readMore(city) {
-    let dots = document.querySelector(`.card[card-num="${city}"] .dots`);
-    let moreText = document.querySelector(`.card[card-num="${city}"] .more`);
-    let btnText = document.querySelector(`.card[card-num="${city}"] .myBtn`);
+    let dots = document.querySelector(`.card[id="${city}"] .dots`);
+    let moreText = document.querySelector(`.card[id="${city}"] .more`);
+    let btnText = document.querySelector(`.card[id="${city}"] .myBtn`);
 
     if (dots.style.display === "none") {
         dots.style.display = "inline";
