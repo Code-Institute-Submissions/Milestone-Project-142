@@ -513,7 +513,10 @@ body {
 @media screen and (max-width: 1000px) {
 	.locations-card {
 		width: 100%;
-	}
+    }
+    .titles{
+        display:none;
+    }
 }
 
 
