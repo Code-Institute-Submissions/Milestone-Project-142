@@ -1,3 +1,4 @@
+ /*----------Const*/
  
 /*--------------------------------Fade animation on content when scrolling through page */
 const appearOptions = {
@@ -89,7 +90,7 @@ function initMap() {
             map: map,
         });
         marker.info = new google.maps.InfoWindow({
-            content: feature.infoContent
+            content: renderMarkerModal(feature)
         });
 
         google.maps.event.addListener(marker, 'click', function() {
@@ -97,50 +98,90 @@ function initMap() {
         });
     }
 
+    function renderMarkerModal(feature) {
+      // Might move this to the top of the file.
+      const googleMapsBaseLink = "https://www.google.co.uk/maps/place/"
+      return `
+        <h2 class='locations-link'>${feature.name}</h2>
+        <br>
+        <p>${feature.description}</p>
+        <a target=”_blank” class='locations-link' href='${googleMapsBaseLink}${feature.googleMapsLink}' >
+        ${feature.address}
+        </a>
+      `
+    }
+
     const features = [{
             position: new google.maps.LatLng(40.41963937438271, -3.710712092531764),
             type: "restaurant",
-            infoContent: "<h2 class='locations-link'>100 Montaditos</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/Cervecer%C3%ADa+100+Montaditos/@40.4177444,-3.7105404,15z/data=!4m8!1m2!2m1!1s100+montaditos!3m4!1s0x0:0x7669f25b6792ab75!8m2!3d40.4187259!4d-3.7108389' >Calle de Felipe V, 4, 28013</a>",
+            name: "100 Montaditos",
+            address: "Calle de Felipe V, 4, 28013",
+            googleMapsLink: "Cervecer%C3%ADa+100+Montaditos/@40.4177444,-3.7105404,15z/data=!4m8!1m2!2m1!1s100+montaditos!3m4!1s0x0:0x7669f25b6792ab75!8m2!3d40.4187259!4d-3.7108389",
+            description: "100 Montaditos offers a range of mini sandwiches filled with a variety of spanish tapas!"
         },
         {
             position: new google.maps.LatLng(40.41686585276432, -3.704739063563049),
             type: "restaurant",
-            infoContent: "<h2 class='locations-link'>La Mallorquina</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/La+Mallorquina/@40.4177437,-3.7105404,15z/data=!3m1!5s0xd42287e6125da65:0xd208870869ee8b84!4m8!1m2!2m1!1sla+mallorquina!3m4!1s0xd42287e69d15b8d:0x1501ee0d7d619ce7!8m2!3d40.4166836!4d-3.704775' >Puerta del Sol, 8, 28013</a>",
+            name: "La Mallorquina",
+            address: "Puerta del Sol, 8, 28013",
+            googleMapsLink: "La+Mallorquina/@40.4177437,-3.7105404,15z/data=!3m1!5s0xd42287e6125da65:0xd208870869ee8b84!4m8!1m2!2m1!1sla+mallorquina!3m4!1s0xd42287e69d15b8d:0x1501ee0d7d619ce7!8m2!3d40.4166836!4d-3.704775",
+            description: "Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!"
         },
         {
             position: new google.maps.LatLng(40.41285346994623, -3.709641346131572),
             type: "restaurant",
-            infoContent: "<h2 class='locations-link'>Astor Restaurant</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/%C3%81stor+gastro-place/@40.412688,-3.711754,17z/data=!3m1!4b1!4m5!3m4!1s0xd4227d62756f371:0x80a15bc585f4b264!8m2!3d40.412688!4d-3.7095653' >Calle del Almendro, 9, 28005</a>",
+            name: "Astor Restaurant",
+            address: "Calle del Almendro, 9, 28005",
+            googleMapsLink: "%C3%81stor+gastro-place/@40.412688,-3.711754,17z/data=!3m1!4b1!4m5!3m4!1s0xd4227d62756f371:0x80a15bc585f4b264!8m2!3d40.412688!4d-3.7095653",
+            description: "If you're looking for more of a classy dining experience Astor is one of the best to go!"
         },
         {
             position: new google.maps.LatLng(40.415544516331344, -3.7089624863842814),
             type: "sanmiguel",
-            infoContent: "<h2 class='locations-link'>Mercado San Miguel</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/Mercado+de+San+Miguel/@40.4153794,-3.7111584,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287921196e2d:0x162fe6d34dd190e8!8m2!3d40.4153794!4d-3.7089697' >Plaza de San Miguel, 28005</a>",
+            name: "Mercado San Miguel",
+            address: "Plaza de San Miguel, 28005",
+            googleMapsLink: "Mercado+de+San+Miguel/@40.4153794,-3.7111584,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287921196e2d:0x162fe6d34dd190e8!8m2!3d40.4153794!4d-3.7089697",
+            description: "One of the best European markets, you can buy wholefoods, tapas and even wine."
         },
         {
             position: new google.maps.LatLng(40.4127662769096, -3.7090535171599766),
             type: "cavabaja",
-            infoContent: "<h2 class='locations-link'>Calle Cava Baja</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/Calle+de+la+Cava+Baja,+28005+Madrid,+Spain/@40.4125294,-3.7111993,17z/data=!3m1!4b1!4m5!3m4!1s0xd4227d620613c77:0xfa4f03e2f4864f07!8m2!3d40.4125294!4d-3.7090106' >Calle de la Cava Baja, 28005</a>",
+            name: "Calle Cava Baja",
+            address: "Calle de la Cava Baja, 28005",
+            googleMapsLink: "Calle+de+la+Cava+Baja,+28005+Madrid,+Spain/@40.4125294,-3.7111993,17z/data=!3m1!4b1!4m5!3m4!1s0xd4227d620613c77:0xfa4f03e2f4864f07!8m2!3d40.4125294!4d-3.7090106",
+            description: "All along this road you will find many trdtional Spanish tapas bars to enjoy!"
         },
         {
             position: new google.maps.LatLng(40.4153, -3.6845), //Retiro Park
             type: "landmark",
-            infoContent: "<h2 class='locations-link'>Retiro Park</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/El+Retiro+Park/@40.4152606,-3.6866882,17z/data=!3m1!4b1!4m5!3m4!1s0xd42289ff511827b:0x9e6c2716b524a3ae!8m2!3d40.4152606!4d-3.6844995' >Plaza de la Independencia, 7, 28001</a>",
+            name: "Retiro Park",
+            address: "Plaza de la Independencia, 7, 28001",
+            googleMapsLink: "El+Retiro+Park/@40.4152606,-3.6866882,17z/data=!3m1!4b1!4m5!3m4!1s0xd42289ff511827b:0x9e6c2716b524a3ae!8m2!3d40.4152606!4d-3.6844995",
+            description: "One of the largest and most beautiful parks in the whole of Spain"
         },
         {
             position: new google.maps.LatLng(40.4180, -3.7143), //Royal Palace
             type: "landmark",
-            infoContent: "<h2 class='locations-link'>Royal Palace</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/Royal+Palace+of+Madrid/@40.4152553,-3.7195188,13z/data=!4m8!1m2!2m1!1sroyal+palace!3m4!1s0xd42287e7da4a9c1:0x2e7fec79d6ce4851!8m2!3d40.417955!4d-3.714312' >Calle de Bailén, 28071</a>",
+            name: "Royal Palace",
+            address: "Calle de Bailén, 28071",
+            googleMapsLink: "Royal+Palace+of+Madrid/@40.4152553,-3.7195188,13z/data=!4m8!1m2!2m1!1sroyal+palace!3m4!1s0xd42287e7da4a9c1:0x2e7fec79d6ce4851!8m2!3d40.417955!4d-3.714312",
+            description: "Spains Royal Palace, home to one of the few Royal Familys left and available for a tour"
         },
         {
             position: new google.maps.LatLng(40.4200, -3.7021), //Gran Via
             type: "landmark",
-            infoContent: "<h2 class='locations-link'>Royal Palace</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/C%2F+Gran+V%C3%ADa,+Madrid,+Spain/@40.4189435,-3.6990306,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287d6da3df33:0xe119406d894c5d21!8m2!3d40.4189435!4d-3.6968419' >Gran Via,</a>",
+            name: "Gran Via",
+            address: "Gran Via",
+            googleMapsLink: "C%2F+Gran+V%C3%ADa,+Madrid,+Spain/@40.4189435,-3.6990306,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287d6da3df33:0xe119406d894c5d21!8m2!3d40.4189435!4d-3.6968419",
+            description: "One of the best shopping high streets in Spain filled with classical buildings"
         },
         {
             position: new google.maps.LatLng(40.4155, -3.7074), //Plaza Mayor
             type: "landmark",
-            infoContent: "<h2 class='locations-link'>Plaza Mayor</h2><br> <a target=”_blank” class='locations-link' href='https://www.google.co.uk/maps/place/Plaza+Mayor/@40.415511,-3.7095896,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287ed77a7e65:0x49a63c540111181c!8m2!3d40.415511!4d-3.7074009' >Plaza Mayor, 28012</a>",
+            name: "Plaza Mayor",
+            address: "Plaza Mayor, 28012",
+            googleMapsLink: "Plaza+Mayor/@40.415511,-3.7095896,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287ed77a7e65:0x49a63c540111181c!8m2!3d40.415511!4d-3.7074009",
+            description: "Spains most famous Plaza right in the center of Madrid filled with bars and restaurants"
         },
     ];
     for (var i = 0, feature; feature = features[i]; i++) {
