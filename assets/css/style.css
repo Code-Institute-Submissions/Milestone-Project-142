@@ -554,6 +554,10 @@ body {
 	max-width: 100%;
 }
 
+.center-form input{
+    margin-bottom:15px;
+}
+
 button[type="submit"] {
 	margin-top: 15px;
 	margin-bottom: 20px;

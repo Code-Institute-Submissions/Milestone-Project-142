@@ -1,3 +1,4 @@
+ 
 /*--------------------------------Fade animation on content when scrolling through page */
 const appearOptions = {
     threshold: 0.4,
