@@ -57,7 +57,7 @@ const mediaQuery = window.matchMedia('(min-width: 1000px)')
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 15,
-        center: new google.maps.LatLng(40.41733521420438, -3.7065231865401853),
+        center: new google.maps.LatLng(40.416604, -3.699516),
         mapTypeId: "roadmap",
     });
 
@@ -104,7 +104,7 @@ function initMap() {
       return `
         <h2 class='locations-link'>${feature.name}</h2>
         <br>
-        <p>${feature.description}</p>
+        <p class='locations-link' >${feature.description}</p>
         <a target=”_blank” class='locations-link' href='${googleMapsBaseLink}${feature.googleMapsLink}' >
         ${feature.address}
         </a>
