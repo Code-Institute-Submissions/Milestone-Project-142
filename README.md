@@ -77,7 +77,7 @@ Throughout the process of coding my website and input from other people, a few i
 * Separating images with overlay text zoom on hover
 * Card images zoom on hover
 * Read more buttons show text when clicked and button changes to say Read Less, text colour changes when hovering over
-* Link scrolling up to map when clicked
+* Link scrolling up to map when clicked, zooms and centers on custom marker
 * When clicking on image redirects to the website of restaurant or website with information about place to visit
 
 ### Contact Form
