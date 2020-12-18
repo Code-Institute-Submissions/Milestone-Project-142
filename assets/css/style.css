@@ -140,13 +140,15 @@ a:hover {
 }
 
 @media screen and (max-width: 340px) {
-    .navbar-brand-text{
-        font-size:2rem;
-    }
-    .navbar-toggler-icon{
-        padding-top:6px;
-    }
+	.navbar-brand-text {
+		font-size: 2rem;
+	}
+	.navbar-toggler-icon {
+		padding-top: 6px;
+	}
 }
+
+
 /*--------------------------------------------------Hero Image*/
 
 #hero-section {
@@ -282,10 +284,8 @@ a:hover {
 	}
 }
 
-
-
 @media screen and (max-width: 340px) {
-    #hero-title {
+	#hero-title {
 		font-size: 5rem;
 	}
 }
@@ -486,6 +486,10 @@ body {
 	font-size: 1rem;
 }
 
+.locations-card h1 {
+	font-size: 2rem;
+}
+
 .locations-card button {
 	border: none;
 	outline: 0;
@@ -513,10 +517,10 @@ body {
 @media screen and (max-width: 1000px) {
 	.locations-card {
 		width: 100%;
-    }
-    .titles{
-        display:none;
-    }
+	}
+	.titles {
+		display: none;
+	}
 }
 
 
@@ -554,8 +558,8 @@ body {
 	max-width: 100%;
 }
 
-.center-form input{
-    margin-bottom:15px;
+.center-form input {
+	margin-bottom: 15px;
 }
 
 button[type="submit"] {
