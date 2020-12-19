@@ -1,53 +1,4 @@
-/*--------------------------------Fade animation on content when scrolling through page */
-const appearOptions = {
-    threshold: 0.4,
-    rootMargin: "0px 0px 0px 0px"
-};
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('appear');
-                appearOnScroll.unobserve(entry.target);
-            }
-        })
-    },
-    appearOptions);
-
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-})
-
-
-/*---------------------------------Back to top button */
-backToTopButton = document.querySelector('#back-to-top-btn');
-
-
-backToTopButton.addEventListener("click", backToTop);
-
-function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-
-/*---------------------------------Navbar hide on click */
-
-$(function() {
-    var navMain = $(".navbar-collapse"); // avoid dependency on #id
-    // "a:not([data-toggle])" - to avoid issues caused
-    // when you have dropdown inside navbar
-    navMain.on("click", "a:not([data-toggle])", null, function() {
-        navMain.collapse('hide');
-    });
-});
-
-
 /*---------------------------------------Google Maps API */
-
 
 let map;
 const mediaQuery = window.matchMedia('(min-width: 1000px)')
@@ -60,60 +11,7 @@ function initMap() {
 
 
     });
-
-
-
-
-    const iconBase = src = "assets/images/";
-    const icons = {
-        restaurant: {
-            name: "Restaurant",
-            icon: iconBase + "cutleryicon.png",
-        },
-        sanmiguel: {
-            name: "Mercado San Miguel",
-            icon: iconBase + "marketicon.png",
-        },
-        cavabaja: {
-            name: "Calle Cava Baja",
-            icon: iconBase + "tapasicon.png",
-        },
-        landmark: {
-            name: "Landmark",
-            icon: iconBase + "icon.png",
-        },
-    };
-
-    function addMarker(feature) {
-        var marker = new google.maps.Marker({
-            position: feature.position,
-            icon: icons[feature.type].icon,
-            map: map,
-        });
-        marker.info = new google.maps.InfoWindow({
-            content: renderMarkerModal(feature)
-        });
-
-        google.maps.event.addListener(marker, 'click', function() {
-            marker.info.open(map, marker);
-        });
-    }
-
-
-    function renderMarkerModal(feature) {
-        // Might move this to the top of the file.
-        const googleMapsBaseLink = "https://www.google.co.uk/maps/place/"
-        return `
-        <h2 class='locations-link'>${feature.name}</h2>
-        <br>
-        <p class='locations-link' >${feature.description}</p>
-        <a target=”_blank” class='locations-link' href='${googleMapsBaseLink}${feature.googleMapsLink}' >
-        ${feature.address}
-        </a>
-      `
-    }
-
-    const features = [{
+ const features = [{
             position: new google.maps.LatLng(40.41963937438271, -3.710712092531764),
             type: "restaurant",
             name: "100 Montaditos",
@@ -194,15 +92,67 @@ function initMap() {
             description: "Center of Madrid leading to shops and restaurants with large Metro station"
         },
     ];
-    for (var i = 0, feature; feature = features[i]; i++) {
-        addMarker(feature);
+
+    const iconBase = src = "assets/images/";
+    const icons = {
+        restaurant: {
+            name: "Restaurant",
+            icon: iconBase + "cutleryicon.png",
+        },
+        sanmiguel: {
+            name: "Mercado San Miguel",
+            icon: iconBase + "marketicon.png",
+        },
+        cavabaja: {
+            name: "Calle Cava Baja",
+            icon: iconBase + "tapasicon.png",
+        },
+        landmark: {
+            name: "Landmark",
+            icon: iconBase + "icon.png",
+        },
+    };
+
+    function addMarker(feature) {
+        var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map,
+        });
+        marker.info = new google.maps.InfoWindow({
+            content: renderMarkerModal(feature)
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            marker.info.open(map, marker);
+        });
     }
+
+
+    function renderMarkerModal(feature) {
+        // Might move this to the top of the file.
+        const googleMapsBaseLink = "https://www.google.co.uk/maps/place/"
+        return `
+        <h2 class='locations-link'>${feature.name}</h2>
+        <br>
+        <p class='locations-link' >${feature.description}</p>
+        <a target=”_blank” class='locations-link' href='${googleMapsBaseLink}${feature.googleMapsLink}' >
+        ${feature.address}
+        </a>
+      `
+    }
+
+   
+    for (var i = 0, feature; feature = features[i]; i++ ){
+        addMarker(features[i])
+    }
+    
 
     // Aloows zoom and centering on specific locations on map when clicking link in maps
 
     //100 Montaditos
     google.maps.event.addDomListener(document.getElementById('montaditosMap'), 'click', function() {
-        map.setCenter(new google.maps.LatLng(40.41963937438271, -3.710712092531764));
+        map.setCenter(position[0]);
         map.setZoom(17)
     });
     //La Mallorquina
@@ -231,6 +181,7 @@ function initMap() {
         map.setZoom(17)
     });
 
+
     /*-Legend For Map-*/
 
     for (const key in icons) {
@@ -242,50 +193,5 @@ function initMap() {
         legend.appendChild(div);
     }
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
 
-
-/*----------------------------------Read more function*/
-function readMore(city) {
-    let dots = document.querySelector(`.card[id="${city}"] .dots`);
-    let moreText = document.querySelector(`.card[id="${city}"] .more`);
-    let btnText = document.querySelector(`.card[id="${city}"] .myBtn`);
-
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.textContent = "Read more";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.textContent = "Read less";
-        moreText.style.display = "inline";
-    }
-}
-
-
-/*----------------------------------Email function*/
-
-function sendMail(contactForm) {
-    emailjs.send("gmail", "madrid-email", {
-            "from_name": contactForm.name.value,
-            "from_email": contactForm.emailaddress.value,
-            "project_request": contactForm.projectsummary.value
-        })
-        .then(
-            function(response) {
-                console.log("Success", response);
-            },
-            function(error) {
-                console.log("Failed", error);
-            }
-        );
-    return false;
-}
-
-
-/*Allows alert to show message has been sent*/
-
-function alertFunction() {
-    alert("Message has been sent!");
-}
+google.maps.event.addDomListener(window, 'load', initialize);}
