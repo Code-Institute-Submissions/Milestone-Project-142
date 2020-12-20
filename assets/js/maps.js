@@ -53,6 +53,14 @@ function initMap() {
             description: "All along this road you will find many trdtional Spanish tapas bars to enjoy!"
         },
         {
+            position: new google.maps.LatLng(40.41721306239462, -3.703508284633918), //Sol
+            type: "landmark",
+            name: "Sol",
+            address: "Puerta Del Sol",
+            googleMapsLink: "Sol,+Madrid,+Spain/@40.4169335,-3.7083759,16z/data=!3m1!4b1!4m5!3m4!1s0xd42287e1463b6cf:0x14a34120b9332d61!8m2!3d40.4166635!4d-3.7041687",
+            description: "Center of Madrid leading to shops and restaurants with large Metro station"
+        },
+        {
             position: new google.maps.LatLng(40.4153, -3.6845), //Retiro Park
             type: "landmark",
             name: "Retiro Park",
@@ -83,14 +91,6 @@ function initMap() {
             address: "Plaza Mayor, 28012",
             googleMapsLink: "Plaza+Mayor/@40.415511,-3.7095896,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287ed77a7e65:0x49a63c540111181c!8m2!3d40.415511!4d-3.7074009",
             description: "Spains most famous Plaza right in the center of Madrid filled with bars and restaurants"
-        },
-        {
-            position: new google.maps.LatLng(40.41721306239462, -3.703508284633918), //Sol
-            type: "landmark",
-            name: "Sol",
-            address: "Puerta Del Sol",
-            googleMapsLink: "Sol,+Madrid,+Spain/@40.4169335,-3.7083759,16z/data=!3m1!4b1!4m5!3m4!1s0xd42287e1463b6cf:0x14a34120b9332d61!8m2!3d40.4166635!4d-3.7041687",
-            description: "Center of Madrid leading to shops and restaurants with large Metro station"
         },
     ];
 
@@ -131,40 +131,40 @@ function initMap() {
     }
 
 
-    for (var i = 0; feature = features[i]; i++) {
-        addMarker(feature);
-    }
+    for (var i = 0; i < features.length; i++) {          
+          addMarker(features[i]);      
 
+    }
  // Aloows zoom and centering on specific locations on map when clicking link in maps
 
          //100 Montaditos
         google.maps.event.addDomListener(document.getElementById('montaditosMap'), 'click', function() {
-            map.setCenter(features.position);
+            map.setCenter(features[0].position);
             map.setZoom(17)
         });
         //La Mallorquina
         google.maps.event.addDomListener(document.getElementById('mallorquinaMap'), 'click', function() {
-            map.setCenter(new google.maps.LatLng(40.41686585276432, -3.704739063563049));
+            map.setCenter(features[1].position);
             map.setZoom(17)
         });
         //Astor Restaurant
         google.maps.event.addDomListener(document.getElementById('astorMap'), 'click', function() {
-            map.setCenter(new google.maps.LatLng(40.41285346994623, -3.709641346131572));
+            map.setCenter(features[2].position);
             map.setZoom(17)
         });
         //Mercado San Miguel
         google.maps.event.addDomListener(document.getElementById('sanmiguelMap'), 'click', function() {
-            map.setCenter(new google.maps.LatLng(40.415544516331344, -3.7089624863842814));
+            map.setCenter(features[3].position);
             map.setZoom(17)
         });
         //Calle Cava Baja
         google.maps.event.addDomListener(document.getElementById('cavaMap'), 'click', function() {
-            map.setCenter(new google.maps.LatLng(40.4127662769096, -3.7090535171599766));
+            map.setCenter(features[4].position);
             map.setZoom(17)
         });
         //Sol
         google.maps.event.addDomListener(document.getElementById('solMap'), 'click', function() {
-            map.setCenter(new google.maps.LatLng(40.41721306239462, -3.703508284633918));
+            map.setCenter(features[5].position);
             map.setZoom(17)
         });
     
