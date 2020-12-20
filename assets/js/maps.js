@@ -10,8 +10,9 @@ function initMap() {
 
 
     });
-
+/*--Holds all information for maps*/
     const features = [{
+        //100 Montaditos
             position: new google.maps.LatLng(40.41963937438271, -3.710712092531764),
             type: "restaurant",
             name: "100 Montaditos",
@@ -19,6 +20,7 @@ function initMap() {
             googleMapsLink: "Cervecer%C3%ADa+100+Montaditos/@40.4177444,-3.7105404,15z/data=!4m8!1m2!2m1!1s100+montaditos!3m4!1s0x0:0x7669f25b6792ab75!8m2!3d40.4187259!4d-3.7108389",
             description: "100 Montaditos offers a range of mini sandwiches filled with a variety of spanish tapas!"
         },
+        //La Mallorquina
         {
             position: new google.maps.LatLng(40.41686585276432, -3.704739063563049),
             type: "restaurant",
@@ -27,6 +29,7 @@ function initMap() {
             googleMapsLink: "La+Mallorquina/@40.4177437,-3.7105404,15z/data=!3m1!5s0xd42287e6125da65:0xd208870869ee8b84!4m8!1m2!2m1!1sla+mallorquina!3m4!1s0xd42287e69d15b8d:0x1501ee0d7d619ce7!8m2!3d40.4166836!4d-3.704775",
             description: "Mallorquina offer the best pastries and cakes you can get right in the center of Madrid!"
         },
+        //Astor
         {
             position: new google.maps.LatLng(40.41285346994623, -3.709641346131572),
             type: "restaurant",
@@ -35,6 +38,7 @@ function initMap() {
             googleMapsLink: "%C3%81stor+gastro-place/@40.412688,-3.711754,17z/data=!3m1!4b1!4m5!3m4!1s0xd4227d62756f371:0x80a15bc585f4b264!8m2!3d40.412688!4d-3.7095653",
             description: "If you're looking for more of a classy dining experience Astor is one of the best to go!"
         },
+        //Mercado San Miguel
         {
             position: new google.maps.LatLng(40.415544516331344, -3.7089624863842814),
             type: "sanmiguel",
@@ -43,6 +47,7 @@ function initMap() {
             googleMapsLink: "Mercado+de+San+Miguel/@40.4153794,-3.7111584,17z/data=!3m1!4b1!4m5!3m4!1s0xd42287921196e2d:0x162fe6d34dd190e8!8m2!3d40.4153794!4d-3.7089697",
             description: "One of the best European markets, you can buy wholefoods, tapas and even wine."
         },
+        //Calle Cava baja
         {
             position: new google.maps.LatLng(40.4127662769096, -3.7090535171599766),
             type: "cavabaja",
@@ -92,7 +97,7 @@ function initMap() {
             description: "Spains most famous Plaza right in the center of Madrid filled with bars and restaurants"
         },
     ];
-
+//Custom icn images
     const iconBase = "assets/images/";
     const icons = {
         restaurant: {
@@ -112,7 +117,7 @@ function initMap() {
             icon: iconBase + "icon.png",
         },
     };
-
+//Added Markers
     function addMarker(feature) {
         var marker = new google.maps.Marker({
             position: feature.position,
