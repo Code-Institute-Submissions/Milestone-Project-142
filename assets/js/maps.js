@@ -1,5 +1,4 @@
 /*---------------------------------------Google Maps API */
-
 let map;
 const mediaQuery = window.matchMedia('(min-width: 1000px)')
 
@@ -11,7 +10,9 @@ function initMap() {
 
 
     });
- const features = [{
+
+    
+    const features = [{
             position: new google.maps.LatLng(40.41963937438271, -3.710712092531764),
             type: "restaurant",
             name: "100 Montaditos",
@@ -112,7 +113,6 @@ function initMap() {
             icon: iconBase + "icon.png",
         },
     };
-
     function addMarker(feature) {
         var marker = new google.maps.Marker({
             position: feature.position,
@@ -126,8 +126,48 @@ function initMap() {
         google.maps.event.addListener(marker, 'click', function() {
             marker.info.open(map, marker);
         });
+
+       
     }
 
+
+    for (var i = 0; feature = features[i]; i++) {
+        addMarker(feature);
+    }
+
+ // Aloows zoom and centering on specific locations on map when clicking link in maps
+
+         //100 Montaditos
+        google.maps.event.addDomListener(document.getElementById('montaditosMap'), 'click', function() {
+            map.setCenter(features.position);
+            map.setZoom(17)
+        });
+        //La Mallorquina
+        google.maps.event.addDomListener(document.getElementById('mallorquinaMap'), 'click', function() {
+            map.setCenter(new google.maps.LatLng(40.41686585276432, -3.704739063563049));
+            map.setZoom(17)
+        });
+        //Astor Restaurant
+        google.maps.event.addDomListener(document.getElementById('astorMap'), 'click', function() {
+            map.setCenter(new google.maps.LatLng(40.41285346994623, -3.709641346131572));
+            map.setZoom(17)
+        });
+        //Mercado San Miguel
+        google.maps.event.addDomListener(document.getElementById('sanmiguelMap'), 'click', function() {
+            map.setCenter(new google.maps.LatLng(40.415544516331344, -3.7089624863842814));
+            map.setZoom(17)
+        });
+        //Calle Cava Baja
+        google.maps.event.addDomListener(document.getElementById('cavaMap'), 'click', function() {
+            map.setCenter(new google.maps.LatLng(40.4127662769096, -3.7090535171599766));
+            map.setZoom(17)
+        });
+        //Sol
+        google.maps.event.addDomListener(document.getElementById('solMap'), 'click', function() {
+            map.setCenter(new google.maps.LatLng(40.41721306239462, -3.703508284633918));
+            map.setZoom(17)
+        });
+    
 
     function renderMarkerModal(feature) {
         // Might move this to the top of the file.
@@ -142,44 +182,15 @@ function initMap() {
       `
     }
 
-   
-    for (var i = 0, feature; feature = features[i]; i++ ){
-        addMarker(features[i])
-    }
+
     
+
+    
+
 
     // Aloows zoom and centering on specific locations on map when clicking link in maps
 
-    //100 Montaditos
-    google.maps.event.addDomListener(document.getElementById('montaditosMap'), 'click', function() {
-        map.setCenter(position[0]);
-        map.setZoom(17)
-    });
-    //La Mallorquina
-    google.maps.event.addDomListener(document.getElementById('mallorquinaMap'), 'click', function() {
-        map.setCenter(new google.maps.LatLng(40.41686585276432, -3.704739063563049));
-        map.setZoom(17)
-    });
-    //Astor Restaurant
-    google.maps.event.addDomListener(document.getElementById('astorMap'), 'click', function() {
-        map.setCenter(new google.maps.LatLng(40.41285346994623, -3.709641346131572));
-        map.setZoom(17)
-    });
-    //Mercado San Miguel
-    google.maps.event.addDomListener(document.getElementById('sanmiguelMap'), 'click', function() {
-        map.setCenter(new google.maps.LatLng(40.415544516331344, -3.7089624863842814));
-        map.setZoom(17)
-    });
-    //Calle Cava Baja
-    google.maps.event.addDomListener(document.getElementById('cavaMap'), 'click', function() {
-        map.setCenter(new google.maps.LatLng(40.4127662769096, -3.7090535171599766));
-        map.setZoom(17)
-    });
-    //Sol
-    google.maps.event.addDomListener(document.getElementById('solMap'), 'click', function() {
-        map.setCenter(new google.maps.LatLng(40.41721306239462, -3.703508284633918));
-        map.setZoom(17)
-    });
+
 
 
     /*-Legend For Map-*/
@@ -194,4 +205,4 @@ function initMap() {
     }
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
 
-google.maps.event.addDomListener(window, 'load', initialize);}
+}
