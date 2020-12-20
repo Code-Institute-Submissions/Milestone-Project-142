@@ -58,6 +58,7 @@ Throughout the process of coding my website and input from other people, a few i
 * Collapsible Navigation Bar which is stuck to the top of the page, once scrolling menu becomes slightly opaque
 * Back to top button in bottom right corner of the page, stays on screen whole time
 * Images throughout the page zoom in when mouse hovers over them
+* Content fades in as scrolling down
 
 ### Nav Bar
 * Collapsable Nav Bar
