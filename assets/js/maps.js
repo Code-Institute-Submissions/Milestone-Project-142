@@ -93,7 +93,7 @@ function initMap() {
         },
     ];
 
-    const iconBase = src = "assets/images/";
+    const iconBase = "assets/images/";
     const icons = {
         restaurant: {
             name: "Restaurant",
