@@ -4,7 +4,7 @@ const mediaQuery = window.matchMedia('(min-width: 1000px)')
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
+        zoom: 13.5,
         center: new google.maps.LatLng(40.416604, -3.699516),
         mapTypeId: "roadmap",
 
